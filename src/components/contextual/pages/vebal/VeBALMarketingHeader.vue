@@ -37,14 +37,14 @@ function navigateToGetVeBAL() {
   <div class="flex flex-col md:flex-row">
     <div class="py-8 lg:py-4 px-4 lg:px-8 2xl:px-0 xl:pt-0 max-w-md hero-text">
       <p class="font-medium eyebrow">veBAL</p>
-      <h1 class="mb-5 text-white title">
+      <h1 class="mb-5 text-black dark:text-white title">
         {{ $t('veBAL.hero.title') }}
       </h1>
       <ul>
         <li
           v-for="(benefit, i) in benefits"
           :key="i"
-          class="flex items-center mb-2 text-white"
+          class="flex items-center mb-2 text-black dark:text-white"
         >
           – {{ benefit }}
         </li>
@@ -59,7 +59,7 @@ function navigateToGetVeBAL() {
           target="_blank"
           rel="noreferrer"
           color="white"
-          class="hero-btn"
+          class="hero-btn text-black dark:text-white"
           outline
         >
           {{ $t('veBAL.hero.buttons.learnMore') }}
@@ -84,7 +84,7 @@ function navigateToGetVeBAL() {
         </div>
         <div class="font-semibold caption">
           <p
-            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal"
+            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal text-black dark:text-white"
           >
             {{ $t('veBAL.hero.tokens.balWETH') }}
           </p>
@@ -105,7 +105,7 @@ function navigateToGetVeBAL() {
         </div>
         <div class="font-semibold caption">
           <p
-            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal"
+            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal text-black dark:text-white"
           >
             {{ $t('veBAL.hero.tokens.lpToken') }}
           </p>
@@ -126,7 +126,7 @@ function navigateToGetVeBAL() {
         </div>
         <div class="font-semibold caption">
           <p
-            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal"
+            class="inline mr-1 text-sm lg:text-base tracking-tighter lg:tracking-normal text-black dark:text-white"
           >
             {{ $t('veBAL.hero.tokens.veBAL') }}
           </p>
