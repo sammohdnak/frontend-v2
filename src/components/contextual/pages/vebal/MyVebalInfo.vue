@@ -353,17 +353,17 @@ function navigateToGetVeBAL() {
 
 <style scoped>
 .btn-gold {
-  background: linear-gradient(45deg, #977622, #ccb373);
+  background: linear-gradient(45deg, #155eef, #155eef);
   transition: 0.5s all ease-in-out;
 }
 
 .btn-gold:hover {
-  background: linear-gradient(-45deg, #ae8d39, #684e09);
+  background: linear-gradient(-45deg, #155eef, #155eef);
 }
 
 .btn-extend {
-  color: rgb(188 162 93 / 100%);
-  border: 1px solid rgb(188 162 93 / 100%);
+  color: #155eef;
+  border: 1px solid #155eef;
 }
 
 .chart-wrapper {
@@ -385,12 +385,14 @@ function navigateToGetVeBAL() {
 }
 
 .dark .hero-container {
-  background-color: #0C111D;
+  background-color: #0c111d;
 }
 
 .hero-container::before {
   content: ' ';
+
   /* background-image: url('/images/patterns/fish-scale.png'); */
+
   /* background-repeat: repeat; */
 
   @apply block absolute left-0 top-0 w-full h-full opacity-10 z-0;
@@ -402,6 +404,7 @@ function navigateToGetVeBAL() {
 
 .hero-container::after {
   content: ' ';
+
   /* background: linear-gradient(45deg, rgb(0 0 0 / 100%), rgb(0 0 0 / 50%)),
     url('/images/backgrounds/vebal-hero-noise.svg'); */
 

@@ -28,11 +28,11 @@
     "pools-fetch-error": "Failed to fetch pools.",
     "price-fetch-error": "Our pricing provider, CoinGecko, is currently down.",
     "retry-label": "Refresh to try again",
-    "boostedPools": "Increased yields, greater capital efficiency, deeper liquidity. Try Balancer Boosted pools now →",
+    "boostedPools": "Increased yields, greater capital efficiency, deeper liquidity. Try Tide Boosted pools now →",
     "vebalL2": "Staking is live on Polygon and Arbitrum. Incentives for eligible pools will resume on April 28.",
     "withdrawToInternalBalance": {
       "title": "Withdraw to Vault balance",
-      "description": "This transaction will withdraw your tokens from this pool to your Balancer Vault balance. \n\nYou will then be able to withdraw the relevant tokens from the Vault using the"
+      "description": "This transaction will withdraw your tokens from this pool to your Tide Vault balance. \n\nYou will then be able to withdraw the relevant tokens from the Vault using the"
     }
   },
   "allow": "Allow",
@@ -55,7 +55,7 @@
     "InsufficientValidTo": "The order you are signing is already expired. This can happen if you set a short expiration in the settings and waited too long before signing the transaction. Please try again.",
     "InsufficientFunds": "The account doesn't have enough funds.",
     "UnsupportedToken": "One of the tokens you are swapping is unsupported.",
-    "WrongOwner": "The signature is invalid.\n\nIt's likely that the signing method provided by your wallet doesn't comply with the standards required by Balancer.\n\nCheck whether your Wallet app supports off-chain signing (EIP-712 or ETHSIGN).",
+    "WrongOwner": "The signature is invalid.\n\nIt's likely that the signing method provided by your wallet doesn't comply with the standards required by Tide.\n\nCheck whether your Wallet app supports off-chain signing (EIP-712 or ETHSIGN).",
     "NotFound": "Token pair selected has insufficient liquidity.",
     "OrderNotFound": "The order you are trying to cancel does not exist.",
     "AlreadyCancelled": "Order is already cancelled.",
@@ -101,7 +101,7 @@
   "available": "Available",
   "availableToClaim": "Available to claim:",
   "balance": "Balance",
-  "balancerGovernance": "Balancer governance",
+  "balancerGovernance": "Tide governance",
   "balances": "Balances",
   "basedOnLast24h": "based on the last 24h",
   "basedOnTokensInWallet": "Based on pool tokens in your wallet",
@@ -109,7 +109,7 @@
   "browseLists": "Browse lists",
   "browserWallet": "Browser Wallet",
   "bugBounty": "Bug bounty",
-  "builtOnBalancer": "Built on Balancer protocol",
+  "builtOnBalancer": "Built on Tide protocol",
   "boosted": "Boosted",
   "boostedTooltip": "This pool has a Boosted Pool component. In addition to accumulating swap fees, Boosted pools also generate yield for LPs by lending excess liquidity to other yield generating DeFi protocols.",
   "clpTooltip": "Designed for capital efficiency,  ‘Concentrated Liquidity Pools’ (CLPs) are a class of AMMs that price the exchange of assets within a defined range. As such, any CLP only provides liquidity for trading activity restricted to this specific region.",
@@ -117,12 +117,12 @@
   "build": "Build",
   "blog": "Blog",
   "blockedPool": "This pool has been blocked in the UI.",
-  "boostedPool": "Balancer Boosted pool",
-  "byConnectingWallet": "By connecting a wallet, I agree to Balancer Foundation’s",
+  "boostedPool": "Tide Boosted pool",
+  "byConnectingWallet": "By connecting a wallet, I agree to Tide Foundation’s",
   "brandedRedirect": {
     "xave": {
       "title": "Xave Finance",
-      "description": "Xave Finance  (pronounced \"Save Finance\") allows financial services companies (\"fintechs\") to leverage DeFi for real time remittance transfers and high yield consumer savings. Xave does this in a capital efficient way by building liquid FX markets via our custom FXPools integrated with the Balancer V2 Vault.",
+      "description": "Xave Finance  (pronounced \"Save Finance\") allows financial services companies (\"fintechs\") to leverage DeFi for real time remittance transfers and high yield consumer savings. Xave does this in a capital efficient way by building liquid FX markets via our custom FXPools integrated with the Tide V2 Vault.",
       "btnText": "Manage liquidity on app.xave.co"
     },
     "gyro": {
@@ -140,7 +140,7 @@
   "claimHero": {
     "title": "Claim liquidity incentives",
     "legacyTitle": "Claim legacy incentives",
-    "description": "Balancer Protocol liquidity incentives are directed to pools by veBAL voters. Stake in these pools to earn incentives. Boost with veBAL for up to 2.5x extra.",
+    "description": "Tide Protocol liquidity incentives are directed to pools by veBAL voters. Stake in these pools to earn incentives. Boost with veBAL for up to 2.5x extra.",
     "legacyDescription": "Liquidity mining incentive systems before the launch of ve8020-tokenomics have been deprecated. If you provided liquidity before this change and have outstanding incentives you can claim them here.",
     "tipLabel": {
       "addLiquidity": "Add liquidity",
@@ -188,7 +188,7 @@
   "copperLaunchPromo": {
     "buttonLabel": "View this auction on Copper",
     "description": "Copper is the platform for FLAs—a simple crowdfunding mechanism that enables projects and ideas from across the world to raise money from individuals without barriers to entry.",
-    "poweredByBalancer": "Copper is built on Balancer V2 and uses Liquidity Bootstrapping Pools to power its FLAs",
+    "poweredByBalancer": "Copper is built on Tide V2 and uses Liquidity Bootstrapping Pools to power its FLAs",
     "title": "A Copper fair launch auction pool (FLA)"
   },
   "continueAnyway": "Continue anyway",
@@ -209,8 +209,8 @@
     "enterTokenPrice": "Enter the estimated current price of {0} in $USD",
     "existingPoolInfo": "There’s already another pool with exactly the same tokens and fee structure. It’s recommended to add your liquidity to the other pool or to go back and change your Pool Creation parameters in a material way to avoid fractured liquidity and lower profits for both pools.",
     "fixedFeeRadioLabel": "Permanently fix fees to the initial rate",
-    "governanceFees": "Allow Balancer governance to manage fees",
-    "governanceFeesTooltip": "Enable this to give Balancer governance the ability to dynamically manage the fees of this pool in order to maximize profits. But note, Balancer governance is under no obligation to actually manage the fees and will likely only do so if there is significant swap volume.",
+    "governanceFees": "Allow Tide governance to manage fees",
+    "governanceFeesTooltip": "Enable this to give Tide governance the ability to dynamically manage the fees of this pool in order to maximize profits. But note, Tide governance is under no obligation to actually manage the fees and will likely only do so if there is significant swap volume.",
     "invalidInitialWeightsInfo": "One or more tokens has an initial weight less than 1% which may cause funding to fail. If the token has a missing price, enter in a price. Otherwise, adjust the initial balances in the previous step.",
     "invalidInitialWeightsTitle": "Invalid initial weight",
     "maxInitialLiquidity": "Max initial liquidity",
@@ -309,7 +309,7 @@
     },
     "migrateReason": {
       "title": "Migrate to avoid vulnerability",
-      "description": "A security vulnerability was recently disclosed. Although, no funds are a risk, insofar as the exploit could only be executed by pool owners or Balancer Governance itself which is composed of known participants in the Balancer ecosystem, it is recommended to migrate your funds asap."
+      "description": "A security vulnerability was recently disclosed. Although, no funds are a risk, insofar as the exploit could only be executed by pool owners or Tide Governance itself which is composed of known participants in the Tide ecosystem, it is recommended to migrate your funds asap."
     },
     "stabal3Pool": {
       "whyMigrate": {
@@ -448,15 +448,15 @@
       "linkText": "Fjord Foundry website"
     },
     "Beets": {
-      "description": "Powered by Balancer technology, Beethoven X provides a composable liquidity base layer on Fantom and Optimism. From Boosted Pools to Maturity Adjusted fNFTs, the DEX offers a suite of powerful financial primitives.",
+      "description": "Powered by Tide technology, Beethoven X provides a composable liquidity base layer on Fantom and Optimism. From Boosted Pools to Maturity Adjusted fNFTs, the DEX offers a suite of powerful financial primitives.",
       "linkText": "Beethoven X website"
     },
     "Xave": {
-      "description": "Xave builds liquid FX markets for DeFi. Xave's custom FXPools are integrated with Balancer's v2 vault, providing a capital efficient liquidity hub for stablecoins and RWAs.",
+      "description": "Xave builds liquid FX markets for DeFi. Xave's custom FXPools are integrated with Tide's v2 vault, providing a capital efficient liquidity hub for stablecoins and RWAs.",
       "linkText": "Xave website"
     },
     "Gyroscope": {
-      "description": "Gyroscope is a new stablecoin that, like a physical gyroscope, aims to remain stable as the surrounding environment changes. Gyroscope AMMs—Concentrated Liquidity Pools (CLPs)—leverage Balancer's customizable AMM logic.",
+      "description": "Gyroscope is a new stablecoin that, like a physical gyroscope, aims to remain stable as the surrounding environment changes. Gyroscope AMMs—Concentrated Liquidity Pools (CLPs)—leverage Tide's customizable AMM logic.",
       "linkText": "Gyroscope website"
     }
   },
@@ -507,7 +507,7 @@
       "header": "The fees on this transaction exceed 20% of the swap amount."
     }
   },
-  "goToBalancerV1Site": "Go to the Balancer V1 site ->",
+  "goToBalancerV1Site": "Go to the Tide V1 site ->",
   "goToMigratedPool": "Go to migrated pool",
   "governance": "Governance",
   "grants": "Grants",
@@ -529,7 +529,7 @@
   },
   "highPriceImpact": "High price impact",
   "highPriceImpactDetailed": "This swap is significantly moving the market price.",
-  "highRiskPool": "This is a higher-risk pool that contains one or more unlisted tokens. A liquidity pool is only as good as its weakest token! If a token were blacklisted, infinitely minted, frozen, or exploited in any other way, the value of this pool could go to 0. Balancer Foundation is never liable for losses incurred through using our UI or the Balancer protocol. Be careful, and do your own research!",
+  "highRiskPool": "This is a higher-risk pool that contains one or more unlisted tokens. A liquidity pool is only as good as its weakest token! If a token were blacklisted, infinitely minted, frozen, or exploited in any other way, the value of this pool could go to 0. Tide Foundation is never liable for losses incurred through using our UI or the Tide protocol. Be careful, and do your own research!",
   "home": "Home",
   "hourAbbrev": "h",
   "howDidWeDo": "How did we do?",
@@ -570,7 +570,7 @@
         "default": "Add liquidity preview"
       },
       "tooltips": {
-        "approval": "You must approve {0} to add liquidity for this token on Balancer. Approvals are required once per token, per wallet."
+        "approval": "You must approve {0} to add liquidity for this token on Tide. Approvals are required once per token, per wallet."
       }
     },
     "warning": {
@@ -589,7 +589,7 @@
         "paragraph2": "However, since your connected wallet doesn’t have any pool tokens, go to the ‘Single token’ tab above to add liquidity to this pool with non-pool tokens."
       },
       "blockedPool": {
-        "title": "This pool contains one or more tokens that have not been vetted by the Balancer community: {0}.",
+        "title": "This pool contains one or more tokens that have not been vetted by the Tide community: {0}.",
         "description": "For the protection of LPs, adding liquidity to the pool has been disabled. Click",
         "description2": "to learn how to submit the token(s) for review."
       }
@@ -603,7 +603,7 @@
   },
   "investmentPool": "Liquidity pool",
   "investmentPools": "Liquidity pools",
-  "investmentPoolsAbout": "Stake your assets to get $BAL tokens for participating in Balancer V2 liquidity mining.",
+  "investmentPoolsAbout": "Stake your assets to get $BAL tokens for participating in Tide V2 liquidity mining.",
   "investmentPoolsAboutLink": "Learn more ->",
   "investmentSettled": "Your liquidity add has settled",
   "investmentSuccess": "Your tokens have been added to this pool, and you have received a new LP token representing this action.",
@@ -622,7 +622,7 @@
   "liquidityMiningIncentives": "Liquidity mining incentives",
   "liquidityMiningIncentivesCopy": "Liquidity incentives on {0} are paused for 1 week during its upgrade to the veBAL system. Incentives will resume on April 28.",
   "liquidityMiningPopover": {
-    "airdropEligibility": "People who provide liquidity to eligible pools or swap on eligible token pairs receive weekly $BAL distributions as incentives. $BAL token holders own the Balancer Protocol and can help shape its future by voting on governance proposals.",
+    "airdropEligibility": "People who provide liquidity to eligible pools or swap on eligible token pairs receive weekly $BAL distributions as incentives. $BAL token holders own the Tide Protocol and can help shape its future by voting on governance proposals.",
     "airdropExplainer": "Weekly distributions from liquidity mining on {0} are airdropped on Wednesdays, sent directly to your wallet using disperse.app",
     "claimFreezeWarning": {
       "description": "Since you have several weeks' worth of tokens unclaimed, your screen may appear to freeze after pressing the claim button while it is processed. Just leave your browser open and your wallet will eventually pop open for you to complete the claim.",
@@ -638,7 +638,7 @@
     },
     "title": "Token incentives"
   },
-  "liquidityProviderCopy": "People who provide liquidity to eligible pools or swap on eligible token pairs receive weekly $BAL distributions as incentives. $BAL token holders own the Balancer Protocol and can help shape its future by voting on governance proposals.",
+  "liquidityProviderCopy": "People who provide liquidity to eligible pools or swap on eligible token pairs receive weekly $BAL distributions as incentives. $BAL token holders own the Tide Protocol and can help shape its future by voting on governance proposals.",
   "liquidityProvision": "Liquidity provision",
   "loading": "Loading...",
   "loadingBestPrice": "Looking for the best price...",
@@ -696,11 +696,11 @@
   "mustBeValidAddress": "This is not a valid Ethereum address",
   "myApr": "My APR",
   "myBalance": "My balance",
-  "myBalancerBalance": "My Balancer balance",
+  "myBalancerBalance": "My Tide balance",
   "myBoost": "My boost",
   "myPortfolio": "My portfolio",
   "myShare": "My share",
-  "myLiquidityInBalancerPools": "My liquidity in Balancer pools",
+  "myLiquidityInBalancerPools": "My liquidity in Tide pools",
   "myWallet": "My Ethereum wallet",
   "myWallet2": "My wallet",
   "name": "Name",
@@ -729,7 +729,7 @@
   "noUnstakedInvestments": "You have no unstaked liquidity on {0}",
   "noStakedInvestments": "You have no staked liquidity on {0}",
   "noNativeCurrency": "You’ll need some {0} for gas fees in order to transact on {1}.",
-  "noNativeCurrencyEthereum": "You’ll need some {0} for gas fees in order to do most basic transactions on {1}. However, you may continue to swap any tokens you’ve previously approved for use on Balancer with this wallet, by using the ‘swap gasless’ option.",
+  "noNativeCurrencyEthereum": "You’ll need some {0} for gas fees in order to do most basic transactions on {1}. However, you may continue to swap any tokens you’ve previously approved for use on Tide with this wallet, by using the ‘swap gasless’ option.",
   "noPoolsFound": "No pools found",
   "noPriceImpact": "Best price",
   "noPriceImpactTip": "Adding tokens proportionally gets you the best price.",
@@ -760,7 +760,7 @@
   "pages": {
     "claim": {
       "title": "Claim your liquidity mining incentives",
-      "description": "Incentives to attract liquidity are set by the Balancer protocol and partners. Stakers in eligible pools can claim incentives every block. People with veBAL get a boosted rate—up to 2.5x extra.",
+      "description": "Incentives to attract liquidity are set by the Tide protocol and partners. Stakers in eligible pools can claim incentives every block. People with veBAL get a boosted rate—up to 2.5x extra.",
       "titles": {
         "incentivesOnOtherNetworks": "Incentives on other networks",
         "legacyIncentives": "Legacy incentives"
@@ -771,7 +771,7 @@
     },
     "balances": {
       "title": "My Vault balances",
-      "eulerHack": "Euler eTokens (e.g. eUSDC, eUSDT and eDAI) affected by the Euler hack have been paused and are not transferrable from the Balancer Vault. To redeem your share of the recovered funds of the Euler hack, if you haven't done so already, go to:"
+      "eulerHack": "Euler eTokens (e.g. eUSDC, eUSDT and eDAI) affected by the Euler hack have been paused and are not transferrable from the Tide Vault. To redeem your share of the recovered funds of the Euler hack, if you haven't done so already, go to:"
     }
   },
   "pastEarnings": {
@@ -782,7 +782,7 @@
   "pendingEstimate": "Pending: (estimate)",
   "perWeek": "per week",
   "policies": {
-    "balancerThirdPartyInfo": "Balancer is an open source, permissionless, decentralized protocol. The smart contracts that power the ecosystem may be used by anyone. This website is the Balancer Foundation's front-end to the ecosystem and it is also open-source. You are free to fork it on Github and modify it as you wish",
+    "balancerThirdPartyInfo": "Tide is an open source, permissionless, decentralized protocol. The smart contracts that power the ecosystem may be used by anyone. This website is the Tide Foundation's front-end to the ecosystem and it is also open-source. You are free to fork it on Github and modify it as you wish",
     "cookiesPolicy": "Cookies Policy",
     "privacyPolicy": "Privacy Policy",
     "risks": "Risks",
@@ -840,7 +840,7 @@
       "title": "My pool balance",
       "altTitle": "My pool liquidity balance",
       "poolsRisks": "pool's risks",
-      "risksDisclaimer": "Liquidity Providers encounter risks when using DeFi and Balancer pools. Before proceeding, view this",
+      "risksDisclaimer": "Liquidity Providers encounter risks when using DeFi and Tide pools. Before proceeding, view this",
       "underlyingTokens": "Underlying pool tokens"
     },
     "myWalletTokensCard": {
@@ -872,52 +872,52 @@
   "poolOwner": "Pool Owner",
   "delegateOwner": {
     "title": "Delegate owner",
-    "tooltip": "Permissioned functions validated by the Balancer Vault Authorizer"
+    "tooltip": "Permissioned functions validated by the Tide Vault Authorizer"
   },
   "noOwner": "No owner",
   "poolWarnings": {
     "bugWarning20220513": {
-      "title": "This pool contains double-entrypoint tokens, which have been found to be incompatible with Balancer. It is currently not possible to withdraw all assets from the pool proportionally. While it is possible to withdraw in a single asset, liquidity providers are advised to wait. A mechanism is being implemented to allow for proportional withdrawals. <a href=\"https://forum.balancer.fi/t/medium-severity-bug-found/3161\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Learn more </a>"
+      "title": "This pool contains double-entrypoint tokens, which have been found to be incompatible with Tide. It is currently not possible to withdraw all assets from the pool proportionally. While it is possible to withdraw in a single asset, liquidity providers are advised to wait. A mechanism is being implemented to allow for proportional withdrawals. <a href=\"https://forum.tide.fi/t/medium-severity-bug-found/3161\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Learn more </a>"
     },
     "poolOwnerVulnWarningGovernance": {
-      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.balancer.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. Reach out on Discord if you need help creating a new pool with the same composition.",
+      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.tide.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. Reach out on Discord if you need help creating a new pool with the same composition.",
       "description": ""
     },
     "poolOwnerVulnWarningGovernanceMigrate": {
-      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.balancer.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. You're advised to migrate your liquidity.",
+      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.tide.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. You're advised to migrate your liquidity.",
       "description": ""
     },
     "poolOwnerVulnWarningGovernanceWithdraw": {
-      "title": "This pool was deprecated due to a <a href=\"https://forum.balancer.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">vulnerability</a>. You're advised to withdraw your liquidity asap. Add it to the <a href=\"https://app.balancer.fi/#/ethereum/pool/0xa13a9247ea42d743238089903570127dda72fe4400000000000000000000035d\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">upgraded pool</a> to participate in liquidity incentives.",
+      "title": "This pool was deprecated due to a <a href=\"https://forum.tide.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">vulnerability</a>. You're advised to withdraw your liquidity asap. Add it to the <a href=\"https://app.tide.fi/#/ethereum/pool/0xa13a9247ea42d743238089903570127dda72fe4400000000000000000000035d\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">upgraded pool</a> to participate in liquidity incentives.",
       "description": ""
     },
     "poolOwnerVulnWarningEcosystem": {
-      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.balancer.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. Reach out on Discord if you need help creating a new pool with the same composition."
+      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.tide.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. Reach out on Discord if you need help creating a new pool with the same composition."
     },
     "poolOwnerVulnWarningEcosystemMigrate": {
-      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.balancer.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. You're advised to migrate your liquidity."
+      "title": "This pool is affected by a vulnerability disclosed <a href=\"https://forum.tide.fi/t/vulnerability-disclosure/3179\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">here</a>. You're advised to migrate your liquidity."
     },
     "renBTCWarning": {
       "title": "You are strongly advised to withdraw any liquidity from this pool ASAP to avoid losses! Ideally you should withdraw in a proportional fashion to reduce price impact. The Ren 1.0 network is expected to be <a href=\"https://medium.com/renproject/moving-on-from-alameda-da62a823ce93\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">sunset</a> in December 2022. This will render this version of the renBTC token as valueless, which will trend the overall pool value towards zero. Ren Protocol also strongly advises to <a href=\"https://twitter.com/renprotocol/status/1595807696296751104\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">bridge all ren assets</a> back to their native chain ASAP to avoid being left holding a valueless token which can no longer be redeemed for the native asset."
     },
     "eulerBoostedWarning": {
-      "title": "Due to an exploit on Euler, this pool has been set to recovery mode by the <a href=\"https://docs.balancer.fi/concepts/governance/emergency.html\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Emergency multisig</a>. Euler has disabled the transferability of eTokens so withdrawals from this pool are not possible until that functionality is restored."
+      "title": "Due to an exploit on Euler, this pool has been set to recovery mode by the <a href=\"https://docs.tide.fi/concepts/governance/emergency.html\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Emergency multisig</a>. Euler has disabled the transferability of eTokens so withdrawals from this pool are not possible until that functionality is restored."
     },
     "eulerRecoveryModeWarning": {
-      "title": "Due to an exploit on Euler this pool has been set to recovery mode by the <a href=\"https://docs.balancer.fi/concepts/governance/emergency.html\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Emergency multisig</a>. Proportional withdrawals are enabled in the UI and you are encouraged to withdraw as soon as possible."
+      "title": "Due to an exploit on Euler this pool has been set to recovery mode by the <a href=\"https://docs.tide.fi/concepts/governance/emergency.html\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Emergency multisig</a>. Proportional withdrawals are enabled in the UI and you are encouraged to withdraw as soon as possible."
     },
     "poolProtocolFeeVulnWarning": {
-      "title": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://twitter.com/Balancer/status/1611363559685898247\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>",
+      "title": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://twitter.com/Tide/status/1611363559685898247\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>",
       "tooltip": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately."
     },
     "cspPoolVulnWarning": {
-      "title": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://forum.balancer.fi/t/vulnerability-found-in-some-pools/5102/1\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>",
+      "title": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://forum.tide.fi/t/vulnerability-found-in-some-pools/5102/1\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>",
       "tooltip": "A vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately.",
       "generalTitle": "A vulnerability has been discovered that affects a number of pools. Existing liquidity providers should remove liquidity immediately."
     },
     "fxPoolVulnWarning": {
       "title": "Xave's FXPools are potentially affected by a bug. Xave recommends that LPs temporarily remove liquidity from this pool. <a href=\"https://twitter.com/XaveFinance/status/1725089131330756628\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>",
-      "tooltip": "Xave's FXPools are potentially affected by a bug. Xave recommends that LPs tA vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://twitter.com/Balancer/status/1611363559685898247\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>emporarily remove liquidity from this pool"
+      "tooltip": "Xave's FXPools are potentially affected by a bug. Xave recommends that LPs tA vulnerability has been discovered that affects this pool. Existing liquidity providers should remove liquidity immediately. <a href=\"https://twitter.com/Tide/status/1611363559685898247\" target=\"blank\" rel=\"noreferrer\" class=\"underline\">Read more</a>emporarily remove liquidity from this pool"
     },
     "rateProviderWarning": {
       "title": "A low severity rate provider issue has been discovered that affects this pool. Existing liquidity providers should remove liquidity as soon as possible.",
@@ -967,7 +967,7 @@
   "seeMore": "See more",
   "seeOnExplorer": "See on explorer",
   "seePools": "See pools",
-  "seeV1BalancerInvestments": "Want to see your funds on Balancer V1?",
+  "seeV1BalancerInvestments": "Want to see your funds on Tide V1?",
   "select": "Select",
   "selectToken": "Select token",
   "sell": "Sell",
@@ -983,7 +983,7 @@
     "amazon-web-services": "Used for a variety of infrastructure services, but primarily to fetch and cache blockchain data."
   },
   "settings": "Settings",
-  "setUpEthereumWallet": "Balancer is a DeFi app on Ethereum. Set up an Ethereum Wallet to swap and provide liquidity here.",
+  "setUpEthereumWallet": "Tide is a DeFi app on Ethereum. Set up an Ethereum Wallet to swap and provide liquidity here.",
   "singleToken": "Single token",
   "singleTokenMax": "Single token max",
   "slippageTolerance": "Slippage tolerance",
@@ -1342,7 +1342,7 @@
       "description": "Unlock on Ethereum Mainnet"
     }
   },
-  "tableShowsBalancerV2Pools": "This table shows only Balancer V2 pools.",
+  "tableShowsBalancerV2Pools": "This table shows only Tide V2 pools.",
   "theme": "Theme",
   "yieldAprRewards": {
     "apr": {
@@ -1373,7 +1373,7 @@
   "tokensLowerCase": "tokens",
   "tokensParen": "Token(s)",
   "tokenPrices": "Token prices",
-  "unlistedTokenWarningTitle": "You have added a token that is not included in the Balancer Tokenlist.",
+  "unlistedTokenWarningTitle": "You have added a token that is not included in the Tide Tokenlist.",
   "unlistedTokenWarning": "You will not be able to complete pool creation until it's included. To add a token to our Tokenlist please follow our process described",
   "tooltips": {
     "addLiquidity": {
@@ -1403,11 +1403,11 @@
       "wrapUnwrap": "This option has been disabled because Wrap/Unwrap transactions always require a gas transaction."
     },
     "label": "Swap gasless",
-    "tooltip": "‘Swap gasless’ on the Balancer CoW Protocol for free signature swaps, MEV protection, and the best prices with intelligent swap routing across DeFi exchanges. Turn it off to swap only through Balancer liquidity pools using gas."
+    "tooltip": "‘Swap gasless’ on the Tide CoW Protocol for free signature swaps, MEV protection, and the best prices with intelligent swap routing across DeFi exchanges. Turn it off to swap only through Tide liquidity pools using gas."
   },
   "swapLiquidity": "Swap liquidity",
   "swapSettled": "Your swap has settled",
-  "swapsThroughWeth": "Swaps from ETH route through Balancer liquidity pools and incur gas fees.",
+  "swapsThroughWeth": "Swaps from ETH route through Tide liquidity pools and incur gas fees.",
   "swapSubmissionError": {
     "actionLabel": "Dismiss",
     "title": "An error has occurred"
@@ -1447,11 +1447,11 @@
         "title": "Approve Batch relayer"
       },
       "tokenApproval": {
-        "content": "Your permission is required to swap this token on Balancer. Approvals are required once per token, per wallet.",
+        "content": "Your permission is required to swap this token on Tide. Approvals are required once per token, per wallet.",
         "title": "Approve {0}"
       },
       "sign": {
-        "content": "Upon your signature, the Balancer CoW Protocol will find an optimal route amongst other swappers or from liquidity on other DeFi exchanges, with MEV protection.",
+        "content": "Upon your signature, the Tide CoW Protocol will find an optimal route amongst other swappers or from liquidity on other DeFi exchanges, with MEV protection.",
         "title": "Sign a free message to swap"
       },
       "swap": {
@@ -1556,18 +1556,18 @@
     "migratePool": "{0} {1} to {2}",
     "wrapUnwrap": "{0} {1} to {2}",
     "tooltips": {
-      "approveForInvesting": "You must approve {0} to add liquidity for this token on Balancer. Approvals are required once per token, per wallet.",
+      "approveForInvesting": "You must approve {0} to add liquidity for this token on Tide. Approvals are required once per token, per wallet.",
       "approveForLocking": "You must approve {0} to lock this token. Approvals are required once per token, per wallet.",
-      "approveForStaking": "You must approve {0} to stake this token on Balancer. Approvals are required once per token, per wallet.",
-      "approveForSwapping": "You must approve {0} to swap this token on Balancer. Approvals are required once per token, per wallet.",
+      "approveForStaking": "You must approve {0} to stake this token on Tide. Approvals are required once per token, per wallet.",
+      "approveForSwapping": "You must approve {0} to swap this token on Tide. Approvals are required once per token, per wallet.",
       "approveForUnwrapping": "You must approve {0} to unwrap this token. Approvals are required once per token, per wallet.",
       "unapprove": "You must unapprove {0} before a new approval value can be set"
     }
   },
   "transactionType": "Transaction type",
   "unallocated": "Unallocated",
-  "unavailableOnNetwork": "Sorry! Balancer is not available on this network",
-  "unavailableOnNetworkWithName": "Sorry! Balancer is not available on {0}",
+  "unavailableOnNetwork": "Sorry! Tide is not available on this network",
+  "unavailableOnNetworkWithName": "Sorry! Tide is not available on {0}",
   "unsupportedNetwork": "Unsupported network",
   "unknown": "Unknown",
   "unknownPoolType": "Unknown pool type",

@@ -102,7 +102,7 @@ const bgGradientClasses = computed(() => {
   if (props.outline) return 'bg-transparent hover:bg-gray-50';
 
   let fromColor = 'blue';
-  let toColor = 'pink';
+  let toColor = 'blue';
 
   if (props.color === 'gradient-reverse') {
     fromColor = 'pink';
