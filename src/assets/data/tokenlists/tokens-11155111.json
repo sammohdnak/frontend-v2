@@ -1,0 +1,154 @@
+{
+  "https://raw.githubusercontent.com/balancer/tokenlists/main/generated/balancer.tokenlist.json": {
+    "name": "Balancer",
+    "version": { "major": 1, "minor": 0, "patch": 0 },
+    "keywords": [
+      "Balancer",
+      "DeFi",
+      "DEX",
+      "AMM",
+      "Exchange",
+      "Liquidity",
+      "Pool",
+      "Token",
+      "Swap"
+    ],
+    "logoURI": "https://raw.githubusercontent.com/balancer/pebbles/master/images/pebbles-pad.256w.png",
+    "timestamp": "2024-09-28T02:37:08.063Z",
+    "tokens": [
+      {
+        "chainId": 11155111,
+        "address": "0x96ebffff4d85c381376bfade6cd2607ab4d36982",
+        "name": "Balancer 80 BAL 20 WETH",
+        "symbol": "B-80BAL-20WETH",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "balancer"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xb19382073c7A0aDdbb56Ac6AF1808Fa49e377B75",
+        "name": "Balancer Governance Token",
+        "symbol": "BAL",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "balancer"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "weth"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0x68194a729C2450ad26072b3D33ADaCbcef39D574",
+        "name": "DAI",
+        "symbol": "DAI",
+        "decimals": 18
+      },
+
+      {
+        "chainId": 11155111,
+        "address": "0xf864F011C5A97fD8Da79baEd78ba77b47112935a",
+        "name": "WBTC",
+        "symbol": "WBTC",
+        "decimals": 8
+      },
+
+      {
+        "chainId": 11155111,
+        "address": "0x4d5461d3d5656525231000B7589FcA1DD4050C23",
+        "name": "MyToken",
+        "symbol": "MyTok",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/10843/large/aDAI.png?1584698791",
+        "extensions": {
+          "coingeckoId": "weth"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xb688C9E656627e7C22823D0cE788f9e3EDc0158e",
+        "name": "MyToken1",
+        "symbol": "MyTok1",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/11725/large/aUSDT.png?1593082796",
+        "extensions": {
+          "coingeckoId": "weth"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xFC6082a44C8d0129739b15ed19685b17F187A010",
+        "name": "MyToken2",
+        "symbol": "MyTok2",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/11674/large/aUSDC.png?1592546449",
+        "extensions": {
+          "coingeckoId": "weth"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xAFd6285d5CECA55c8C922EF714311531Ed147de0",
+        "name": "MyToken3",
+        "symbol": "MyTok3",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
+        "extensions": {
+          "coingeckoId": "weth"
+        }
+      },
+
+      {
+        "chainId": 11155111,
+        "address": "0x137A72F2Bb85Bfeb921e7CFa907847a562d2d152",
+        "name": "Bal",
+        "symbol": "Bal",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
+        "extensions": {
+          "coingeckoId": "usd-coin"
+        }
+      },
+
+      {
+        "chainId": 11155111,
+        "address": "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
+        "name": "USDC (AAVE Faucet)",
+        "symbol": "usdc-aave",
+        "decimals": 6,
+        "extensions": {
+          "coingeckoId": "usd-coin"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0",
+        "name": "USDT (AAVE Faucet)",
+        "symbol": "usdt-aave",
+        "decimals": 6,
+        "extensions": {
+          "coingeckoId": "tether"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xFF34B3d4Aee8ddCd6F9AFFFB6Fe49bD371b8a357",
+        "name": "DAI (AAVE Faucet)",
+        "symbol": "dai-aave",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "dai"
+        }
+      }
+    ]
+  }
+}
