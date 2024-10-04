@@ -50,7 +50,7 @@ function navigateToGetVeBAL() {
         </li>
       </ul>
       <div class="flex mt-6">
-        <BalBtn class="mr-3 hero-btn btn-gold" @click="navigateToGetVeBAL">
+        <BalBtn class="mr-3 hero-btn !bg-[#155EEF]" @click="navigateToGetVeBAL">
           {{ $t('veBAL.hero.buttons.getVeBAL') }}
         </BalBtn>
         <BalBtn
@@ -59,7 +59,7 @@ function navigateToGetVeBAL() {
           target="_blank"
           rel="noreferrer"
           color="white"
-          class="hero-btn text-black dark:text-white"
+          class="text-black dark:text-white hero-btn"
           outline
         >
           {{ $t('veBAL.hero.buttons.learnMore') }}

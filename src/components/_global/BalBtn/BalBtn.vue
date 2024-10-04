@@ -156,12 +156,11 @@ const bgColorClasses = computed(() => {
 });
 
 const borderClasses = computed(() => {
-
   if (props.outline) {
     if (props.disabled) return `border border-gray-200 dark:border-gray-700`;
     if (props.color == 'white') {
-      return 'border border-[#0000001a] dark:border-[#ffffff1a] shadow-none '
-   }
+      return 'border border-[#0000001a] dark:border-[#ffffff1a] shadow-none ';
+    }
     return `border ${border(props.color)} ${darkBorder(
       props.color
     )} ${darkHoverBorder(props.color)} ${darkFocusBorder(
@@ -174,10 +173,10 @@ const borderClasses = computed(() => {
 const textColorClasses = computed(() => {
   if (props.outline && props.disabled)
     return 'text-gray-400 dark:text-gray-700';
-  if (props.outline && props.color === 'gradient') return 'text-purple-700';
+  if (props.outline && props.color === 'gradient') return 'text-blue-700';
   if (props.color === 'white') {
     if (props.outline)
-      return 'text-white hover:text-yellow-500 dark:hover:text-yellow-500';
+      return 'text-white hover:text-blue-500 dark:hover:text-blue-500';
     else return 'text-gray-800 hover:text-blue-600 dark:text-gray-100';
   }
   if (props.outline || props.flat)

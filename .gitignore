@@ -26,12 +26,12 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# tokenlists
-/src/assets/data/tokenlists.json
-/src/assets/data/tokenlists/*.json
+# # tokenlists
+# /src/assets/data/tokenlists.json
+# /src/assets/data/tokenlists/*.json
 /src/assets/data/pools/**/*.json
 
-!tokens-11155111.json
+# !tokens-11155111.json
 #test coverage
 /coverage
 

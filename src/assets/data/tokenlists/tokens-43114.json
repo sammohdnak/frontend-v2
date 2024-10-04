@@ -1,0 +1,677 @@
+{
+  "https://raw.githubusercontent.com/balancer/tokenlists/main/generated/balancer.tokenlist.json": {
+    "name": "Balancer",
+    "version": { "major": 1, "minor": 0, "patch": 0 },
+    "keywords": [
+      "Balancer",
+      "DeFi",
+      "DEX",
+      "AMM",
+      "Exchange",
+      "Liquidity",
+      "Pool",
+      "Token",
+      "Swap"
+    ],
+    "logoURI": "https://raw.githubusercontent.com/balancer/pebbles/master/images/pebbles-pad.256w.png",
+    "timestamp": "2024-09-28T02:37:08.063Z",
+    "tokens": [
+      {
+        "chainId": 43114,
+        "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+        "name": "Wrapped AVAX",
+        "symbol": "WAVAX",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xE15bCB9E0EA69e6aB9FA080c4c4A5632896298C3",
+        "name": "Balancer",
+        "symbol": "BAL",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe15bcb9e0ea69e6ab9fa080c4c4a5632896298c3.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+        "name": "TetherToken",
+        "symbol": "USDt",
+        "decimals": 6,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+        "name": "Dai Stablecoin",
+        "symbol": "DAI.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xd586E7F844cEa2F87f50152665BCbc2C279D8d70/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x50b7545627a5162F82A992c33b87aDc75187B218",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC.e",
+        "decimals": 8,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x50b7545627a5162F82A992c33b87aDc75187B218/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x63a72806098Bd3D9520cC43356dD78afe5D386D9",
+        "name": "Aave Token",
+        "symbol": "AAVE.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x63a72806098Bd3D9520cC43356dD78afe5D386D9/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x02D980A0D7AF3fb7Cf7Df8cB35d9eDBCF355f665",
+        "name": "SHIBA INU",
+        "symbol": "SHIB.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x02D980A0D7AF3fb7Cf7Df8cB35d9eDBCF355f665/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x8eBAf22B6F053dFFeaf46f4Dd9eFA95D89ba8580",
+        "name": "Uniswap",
+        "symbol": "UNI.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x8eBAf22B6F053dFFeaf46f4Dd9eFA95D89ba8580/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x5947BB275c521040051D82396192181b413227A3",
+        "name": "Chainlink Token",
+        "symbol": "LINK.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x5947BB275c521040051D82396192181b413227A3/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59EB",
+        "name": "TrueUSD",
+        "symbol": "TUSD",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59EB/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x8a0cAc13c7da965a312f08ea4229c37869e85cB9",
+        "name": "Graph Token",
+        "symbol": "GRT.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x8a0cAc13c7da965a312f08ea4229c37869e85cB9/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64",
+        "name": "Frax",
+        "symbol": "FRAX",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xD24C2Ad096400B6FBcd2ad8B24E7acBc21A1da64/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x214DB107654fF987AD859F34125307783fC8e387",
+        "name": "Frax Share",
+        "symbol": "FXS",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x214DB107654fF987AD859F34125307783fC8e387/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x249848BeCA43aC405b8102Ec90Dd5F22CA513c06",
+        "name": "Curve DAO Token",
+        "symbol": "CRV.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x249848BeCA43aC405b8102Ec90Dd5F22CA513c06/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xBeC243C995409E6520D7C41E404da5dEba4b209B",
+        "name": "Synthetix Network Token",
+        "symbol": "SNX.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xBeC243C995409E6520D7C41E404da5dEba4b209B/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x88128fd4b259552A9A1D457f435a6527AAb72d42",
+        "name": "Maker",
+        "symbol": "MKR.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x88128fd4b259552A9A1D457f435a6527AAb72d42/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x62edc0692BD897D2295872a9FFCac5425011c661",
+        "name": "GMX",
+        "symbol": "GMX",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x62edc0692BD897D2295872a9FFCac5425011c661/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xd501281565bf7789224523144Fe5D98e8B28f267",
+        "name": "1INCH Token",
+        "symbol": "1INCH.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xd501281565bf7789224523144Fe5D98e8B28f267/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x98443B96EA4b0858FDF3219Cd13e98C7A4690588",
+        "name": "Basic Attention Token",
+        "symbol": "BAT.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x98443B96EA4b0858FDF3219Cd13e98C7A4690588/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xc3048E19E76CB9a3Aa9d77D8C03c29Fc906e2437",
+        "name": "Compound",
+        "symbol": "COMP.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xc3048E19E76CB9a3Aa9d77D8C03c29Fc906e2437/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x9eAaC1B23d935365bD7b542Fe22cEEe2922f52dc",
+        "name": "yearn.finance",
+        "symbol": "YFI.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x9eAaC1B23d935365bD7b542Fe22cEEe2922f52dc/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x37B608519F91f70F2EeB0e5Ed9AF4061722e4F76",
+        "name": "SushiToken",
+        "symbol": "SUSHI.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x37B608519F91f70F2EeB0e5Ed9AF4061722e4F76/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+        "name": "JoeToken",
+        "symbol": "JOE",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/17569/large/traderjoe.png?1685690062"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x57319d41F71E81F3c65F2a47CA4e001EbAFd4F33",
+        "name": "JoeBar",
+        "symbol": "xJOE",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0x596fA47043f99A4e0F122243B841E55375cdE0d2",
+        "name": "ZRX",
+        "symbol": "ZRX.e",
+        "decimals": 18,
+        "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0x596fA47043f99A4e0F122243B841E55375cdE0d2/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x152b9d0FdC40C096757F570A51E494bd4b943E50",
+        "name": "Bitcoin",
+        "symbol": "BTC.b",
+        "decimals": 8,
+        "logoURI": "https://assets.coingecko.com/coins/images/26115/large/btcb.png?1655921693"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
+        "name": "StargateToken",
+        "symbol": "STG",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/24413/large/STG_LOGO.png?1647654518"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xeA67626E1f0b59e0d172a04F5702ef90BcdF440C",
+        "name": "Balancer Aave v3 Boosted Pool (USDT)",
+        "symbol": "bb-a-USDT",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0xEb496161099D45B3ea4892408ef745c6182eB56e",
+        "name": "Balancer Aave v3 Boosted Pool (USDC)",
+        "symbol": "bb-a-USDC",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0xa1D14d922a575232066520EDA11E27760946c991",
+        "name": "Balancer Aave v3 Boosted StablePool",
+        "symbol": "bb-a-USD",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
+        "name": "Staked AVAX",
+        "symbol": "sAVAX",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/23657/large/savax_blue.png?1644989825"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x7275c131b1F67e8B53b4691F92B0E35A4c1C6e22",
+        "name": "Balancer Aave v3 Boosted Pool (WAVAX)",
+        "symbol": "bb-a-WAVAX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x7275c131b1f67e8b53b4691f92b0e35a4c1c6e22.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xF7D9281e8e363584973F946201b82ba72C965D27",
+        "name": "YieldYak gAVAX",
+        "symbol": "yyAVAX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf7d9281e8e363584973f946201b82ba72c965d27.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3",
+        "name": "GoGoPool Liquid Staking Token",
+        "symbol": "ggAVAX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xa25eaf2906fa1a3a13edac9b9657108af7b703e3.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xc3344870d52688874b06d844E0C36cc39FC727F6",
+        "name": "Ankr Staked AVAX",
+        "symbol": "ankrAVAX",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/28695/large/ankrAVAX.png?1673413425"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x12D8CE035c5DE3Ce39B1fDD4C1d5a745EAbA3b8C",
+        "name": "Ankr Staked ETH",
+        "symbol": "ankrETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x12d8ce035c5de3ce39b1fdd4c1d5a745eaba3b8c.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
+        "name": "Euro Coin",
+        "symbol": "EUROC",
+        "decimals": 6,
+        "logoURI": "https://assets.coingecko.com/coins/images/26045/large/euro-coin.png?1655394420"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xA291Ae608d8854CdbF9838E28E9BADCf10181669",
+        "name": "Static Aave Avalanche WAVAX",
+        "symbol": "stataAvaWAVAX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xa291ae608d8854cdbf9838e28e9badcf10181669.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x94025780a1aB58868D9B2dBBB775f44b32e8E6e5",
+        "name": "BetSwirl v2",
+        "symbol": "BETS",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x69260B9483F9871ca57f81A90D91E2F96c2Cd11d",
+        "name": "GoGoPool Protocol",
+        "symbol": "GGP",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/30267/large/GGP_logo_square.png?1683776057"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5",
+        "name": "BENQI",
+        "symbol": "QI",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/16362/large/GergDDN3_400x400.jpg?1644984441"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x502580fc390606b47FC3b741d6D49909383c28a9",
+        "name": "Hatchy",
+        "symbol": "HATCHY",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/27560/large/HATCHY_200x200_Logo.png?1664519097"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xB26f0e66317846Bd5fE0cBAa1d269f0efEb05c96",
+        "name": "Balancer USDC-USDT Stable Pool",
+        "symbol": "USDC-USDT-BPT",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0x7678e162f38ec9ef2Bfd1d0aAF9fd93355E5Fa0b",
+        "name": "VNX Euro",
+        "symbol": "VEUR",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/29351/large/VNXEUR_%281%29.png?1678262021"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x228a48df6819CCc2eCa01e2192ebAFfFdAD56c19",
+        "name": "VNX Franc",
+        "symbol": "VCHF",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/29547/large/VNXCHF_%282%29.png?1679561328"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xCA30c93B02514f86d5C86a6e375E3A330B435Fb5",
+        "name": "Backed IB01 $ Treasury Bond 0-1yr",
+        "symbol": "bIB01",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xca30c93b02514f86d5c86a6e375e3a330b435fb5.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x0f76D32CDccDcbd602A55Af23EAF58FD1eE17245",
+        "name": "Backed ERNA $ Ultrashort Bond",
+        "symbol": "bERNA",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x0f76d32cdccdcbd602a55af23eaf58fd1ee17245.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
+        "name": "Backed CSPX Core S&P 500",
+        "symbol": "bCSPX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x1e2c4fb7ede391d116e6b41cd0608260e8801d59.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x20C64dEE8FdA5269A78f2D5BDBa861CA1d83DF7a",
+        "name": "Backed HIGH € High Yield Corp Bond",
+        "symbol": "bHIGH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x20c64dee8fda5269a78f2d5bdba861ca1d83df7a.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x2f11EeeE0bf21E7661A22dbBbb9068F4ad191b86",
+        "name": "Backed Niu Technologies",
+        "symbol": "bNIU",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2f11eeee0bf21e7661a22dbbbb9068f4ad191b86.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x2F123cF3F37CE3328CC9B5b8415f9EC5109b45e7",
+        "name": "Backed GOVIES 0-6 months EURO investment grade",
+        "symbol": "bC3M",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2f123cf3f37ce3328cc9b5b8415f9ec5109b45e7.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x52d134c6DB5889FaD3542A09eAf7Aa90C0fdf9E4",
+        "name": "Backed IBTA $ Treasury Bond 1-3yr",
+        "symbol": "bIBTA",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x52d134c6db5889fad3542a09eaf7aa90c0fdf9e4.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xbbcb0356bB9e6B3Faa5CbF9E5F36185d53403Ac9",
+        "name": "Backed Coinbase Global",
+        "symbol": "bCOIN",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xbbcb0356bb9e6b3faa5cbf9e5f36185d53403ac9.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xCA30c93B02514f86d5C86a6e375E3A330B435Fb5",
+        "name": "Backed IB01 $ Treasury Bond 0-1yr",
+        "symbol": "bIB01",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xca30c93b02514f86d5c86a6e375e3a330b435fb5.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x121b0DfC48444C4d10caddeD9885D90E7453E878",
+        "name": "Balancer SWEEP-USDC StablePool",
+        "symbol": "SWEEP-USDC-BPT",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0xB88a5Ac00917a02d82c7cd6CEBd73E2852d43574",
+        "name": "SweepCoin",
+        "symbol": "SWEEP",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb88a5ac00917a02d82c7cd6cebd73e2852d43574.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xbD80CFA9d93A87D1bb895f810ea348E496611cD4",
+        "name": "Own a fraction",
+        "symbol": "FRACTION",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xbd80cfa9d93a87d1bb895f810ea348e496611cd4.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x8783E0156cd747D0Cc012087d3D3AFC897F2328C",
+        "name": "Balancer sAVAX/ggAVAX/yyAVAX",
+        "symbol": "sAVAX/ggAVAX/yyAVAX",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0xb279f8DD152B99Ec1D84A489D32c35bC0C7F5674",
+        "name": "STEAK",
+        "symbol": "STEAK",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xc92f165f5e20979576A7Ba48f16eb45361c078a2",
+        "name": "EminGunSirer",
+        "symbol": "EGS",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/34557/large/coingecko.png?1705371524"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xfcDe4A87b8b6FA58326BB462882f1778158B02F1",
+        "name": "Wirex Token",
+        "symbol": "WXT",
+        "decimals": 18,
+        "logoURI": "https://coin-images.coingecko.com/coins/images/8835/large/Wirex.jpg?1696508988"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x735D8f3B6A5d2c96D0405230c50Eaf96794FbB88",
+        "name": "XPower",
+        "symbol": "XPOW",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/35936/large/logo-xpower-360-round.png?1710231766"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x7F9C841FEAdDdB4bdBB2A161cA40bEbc4F215a9A",
+        "name": "APower",
+        "symbol": "APOW",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/35937/large/logo-apower-360-round.png?1710231770"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x5Ac04b69bDE6f67C0bd5D6bA6fD5D816548b066a",
+        "name": "NumberGoUpTech",
+        "symbol": "TECH",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/35785/large/I2n2x-Ed_400x400.jpg?1709808486"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x184ff13B3EBCB25Be44e860163A5D8391Dd568c1",
+        "name": "Kimbo",
+        "symbol": "KIMBO",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/33793/large/kimbo.jpg?1702989206"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xAcFb898Cff266E53278cC0124fC2C7C94C8cB9a5",
+        "name": "AVAX HAS NO CHILL",
+        "symbol": "NOCHILL",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/34002/large/IMG_4040.jpeg?1703602967"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x420FcA0121DC28039145009570975747295f2329",
+        "name": "COQINU",
+        "symbol": "COQ",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/33511/large/Coin_CoqInu_1200px.png?1702041053"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xE8385CECb013561b69bEb63FF59f4d10734881f3",
+        "name": "Gecko Inu",
+        "symbol": "GEC",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/33948/large/token_icon.png?1703537806"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x735D8f3B6A5d2c96D0405230c50Eaf96794FbB88",
+        "name": "XPower",
+        "symbol": "XPOW",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/35936/large/logo-xpower-360-round.png?1710231766"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x20CF1b6E9d856321ed4686877CF4538F2C84B4dE",
+        "name": "Ankr Network",
+        "symbol": "ANKR",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/4324/large/U85xTl2.png?1696504928"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
+        "name": "Aura",
+        "symbol": "AURA",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x1509706a6c66ca549ff0cb464de88231ddbe213b.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x913C61ec3573E5E4ee6488552535Fb1be84FF2AC",
+        "name": "Xave Token",
+        "symbol": "XAV",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/28299/large/Xave_logo_gradient.png?1696527298"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xc8E7fB72B53D08C4f95b93b390ed3f132d03f2D5",
+        "name": "SQRCAT",
+        "symbol": "SQRCAT",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xc8E7fB72B53D08C4f95b93b390ed3f132d03f2D5/logo.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x68327a91E79f87F501bC8522fc333FB7A72393cb",
+        "name": "AUX Coin",
+        "symbol": "AUX",
+        "decimals": 18,
+        "logoURI": "https://assets.coingecko.com/coins/images/28298/large/AUX-Coin_200.png?1696527297"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        "name": "Jarvis Synthetic Euro",
+        "symbol": "jEUR",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9fb1d52596c44603198fb0aee434fac3a679f702.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x4Ff5f900ecA8F848bEDf09Fbff7d1CAa2C11a857",
+        "name": "lueygi",
+        "symbol": "$lueygi",
+        "decimals": 18
+      },
+      {
+        "chainId": 43114,
+        "address": "0xcCF580E697B8bBA73748BA881C1872DD4fB01cdA",
+        "name": "LUEYGI",
+        "symbol": "LUEYGI",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xccf580e697b8bba73748ba881c1872dd4fb01cda.png"
+      },
+      {
+        "chainId": 43114,
+        "address": "0x96E1056a8814De39c8c3Cd0176042d6ceCD807d7",
+        "name": "Osaka Protocol",
+        "symbol": "OSAK",
+        "decimals": 18,
+        "logoURI": "https://coin-images.coingecko.com/coins/images/30911/large/osak_logo.png?1696529756"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xaBE662fAeA2EA68f4979A3956C27353D9bC398CA",
+        "name": "USDTether",
+        "symbol": "USDt",
+        "decimals": 8
+      },
+      {
+        "chainId": 43114,
+        "address": "0xc0Fbc4967259786C743361a5885ef49380473dCF",
+        "name": "Aleph.im V2 SuperToken",
+        "symbol": "ALEPH",
+        "decimals": 18,
+        "logoURI": "https://coin-images.coingecko.com/coins/images/11676/large/Aleph-Logo-BW.png?1696511566"
+      },
+      {
+        "chainId": 43114,
+        "address": "0xb2F85b7AB3c2b6f62DF06dE6aE7D09c010a5096E",
+        "name": "XSGD",
+        "symbol": "XSGD",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb2f85b7ab3c2b6f62df06de6ae7d09c010a5096e.png"
+      }
+    ]
+  },
+  "https://unpkg.com/quickswap-default-token-list@1.0.67/build/quickswap-default.tokenlist.json": {
+    "name": "Quickswap Token List",
+    "timestamp": "2021-06-16T19:27:15.683Z",
+    "version": { "major": 1, "minor": 0, "patch": 67 },
+    "tags": {},
+    "logoURI": "ipfs://QmQ9GCVmLQkbPohxKeCYkbpmwfTvHXrY64TmBsPQAZdbqZ",
+    "keywords": ["uniswap", "default"],
+    "tokens": []
+  }
+}
