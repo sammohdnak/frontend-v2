@@ -68,6 +68,7 @@ async function cancelOrder(orderId: string) {
   <BalPopover noPad :align="isMobile ? 'left' : undefined">
     <template #activator>
       <BalBtn
+        :outline="true"
         color="white"
         :size="upToLargeBreakpoint ? 'md' : 'sm'"
         class="relative py-1 w-9 !px-0"

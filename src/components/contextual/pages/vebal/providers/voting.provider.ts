@@ -42,6 +42,7 @@ export function votingProvider() {
     isLoadingVotingPools,
     isRefetchingVotingPools,
   } = useVotingPools();
+
   const { data: expiredGauges, isLoading: isLoadingExpiredGauges } =
     useExpiredGaugesQuery(votingGaugeAddresses);
 

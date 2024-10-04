@@ -19,8 +19,8 @@ const config: Config = {
   trustWalletNetwork: 'ethereum',
   unknown: false,
   visibleInUI: true,
-  testNetwork: true,
-  rpc: `https://sepolia.infura.io/v3/${keys.infura}`,
+  testNetwork: false, //TODO make it to test network later
+  rpc: `https://eth-sepolia.g.alchemy.com/v2/oT2Lf4RLmmJ-c_43vxf0KY0NnBx3_0C7`,
   ws: ``,
   explorer: 'https://sepolia.etherscan.io',
   explorerName: 'Etherscan',
@@ -29,11 +29,12 @@ const config: Config = {
   poolsUrlV2: '',
   subgraphs: {
     main: [
-      'https://api.studio.thegraph.com/query/24660/balancer-sepolia-v2/version/latest',
+      // 'https://api.studio.thegraph.com/query/24660/balancer-sepolia-v2/version/latest',
+      'http://localhost:4000/graphql',
     ],
     aave: '',
     gauge:
-      'https://api.studio.thegraph.com/query/24660/balancer-gauges-sepolia-beta/version/latest',
+      'https://api.studio.thegraph.com/query/51820/tide-gauges/version/latest',
     blocks: '',
   },
   bridgeUrl: '',

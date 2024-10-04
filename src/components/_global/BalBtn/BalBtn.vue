@@ -137,7 +137,7 @@ const bgColorClasses = computed(() => {
   else if (props.outline) return 'bg-transparent';
   else if (props.flat) return bgFlatClasses.value;
   else if (props.color === 'white') {
-    return 'bg-gray-50 hover:bg-white dark:bg-gray-800';
+    return 'bg-transparent';
   } else {
     if (props.disabled) {
       return `bg-gray-300 dark:bg-gray-700 text-white dark:text-gray-500`;
@@ -156,8 +156,12 @@ const bgColorClasses = computed(() => {
 });
 
 const borderClasses = computed(() => {
+
   if (props.outline) {
     if (props.disabled) return `border border-gray-200 dark:border-gray-700`;
+    if (props.color == 'white') {
+      return 'border border-[#0000001a] dark:border-[#ffffff1a] shadow-none '
+   }
     return `border ${border(props.color)} ${darkBorder(
       props.color
     )} ${darkHoverBorder(props.color)} ${darkFocusBorder(

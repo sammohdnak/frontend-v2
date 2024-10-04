@@ -21,10 +21,11 @@ const urlNetworkId: Network | null = routeSlug
   : null;
 
 const NETWORK_ID =
-  urlNetworkId ||
-  localStorageNetworkId ||
-  (Number(import.meta.env.VITE_NETWORK) as Network) ||
-  Network.MAINNET;
+  // urlNetworkId ||
+  // localStorageNetworkId ||
+  Number(import.meta.env.VITE_NETWORK) as Network;
+// ||
+// Network.MAINNET;
 if (windowAvailable) localStorage.setItem('networkId', NETWORK_ID.toString());
 export const networkSlug = config[NETWORK_ID].slug;
 export const networkConfig = config[NETWORK_ID];

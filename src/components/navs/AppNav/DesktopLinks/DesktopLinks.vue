@@ -3,6 +3,7 @@ import { useRoute } from 'vue-router';
 import DesktopLinkItem from './DesktopLinkItem.vue';
 import useNetwork, { isTestnet } from '@/composables/useNetwork';
 import { Goals, trackGoal } from '@/composables/useFathom';
+import { configService } from '@/services/config/config.service';
 
 /**
  * COMPOSABLES
@@ -22,7 +23,7 @@ function isActive(page: string): boolean {
 <template>
   <div class="desktop-links">
     <DesktopLinkItem
-      :to="{ name: 'home', params: { networkSlug } }"
+      :to="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`"
       :active="isActive('home')"
       prefetch
       @click="trackGoal(Goals.ClickNavPools)"
@@ -30,14 +31,15 @@ function isActive(page: string): boolean {
       {{ $t('pool') }}
     </DesktopLinkItem>
     <DesktopLinkItem
-      :to="{ name: 'swap', params: { networkSlug } }"
+    :to="`${configService.env.VITE_APP_MAIN_FE_URL}/swap`"
+
       :active="isActive('swap')"
       prefetch
       @click="trackGoal(Goals.ClickNavSwap)"
     >
       {{ $t('swap') }}
     </DesktopLinkItem>
-    <DesktopLinkItem
+    <!-- <DesktopLinkItem
       :to="{ name: 'claim', params: { networkSlug } }"
       :active="isActive('claim')"
       prefetch
@@ -46,7 +48,7 @@ function isActive(page: string): boolean {
       <div class="flex items-center">
         {{ $t('claim') }}
       </div>
-    </DesktopLinkItem>
+    </DesktopLinkItem> -->
     <DesktopLinkItem
       v-if="isTestnet"
       :to="{ name: 'faucet', params: { networkSlug } }"
@@ -55,7 +57,8 @@ function isActive(page: string): boolean {
       Faucet
     </DesktopLinkItem>
     <DesktopLinkItem
-      :to="{ name: 'portfolio', params: { networkSlug } }"
+    :to="`${configService.env.VITE_APP_MAIN_FE_URL}/portfolio`"
+
       :active="isActive('portfolio')"
       prefetch
       @click="trackGoal(Goals.ClickNavPortfolio)"

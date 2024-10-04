@@ -12,7 +12,7 @@ const tokens: TokenConstants = {
     nativeAsset: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
     wNativeAsset: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9',
     WETH: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9',
-    BAL: '0xb19382073c7A0aDdbb56Ac6AF1808Fa49e377B75',
+    BAL: '0x137A72F2Bb85Bfeb921e7CFa907847a562d2d152',
     bbaUSD: '',
     bbaUSDv2: '',
     rETH: '',
@@ -29,7 +29,7 @@ const tokens: TokenConstants = {
     '0x7b79995e5f793a07bc00c21412e50ecae098e7f9':
       '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     // BAL
-    '0xb19382073c7a0addbb56ac6af1808fa49e377b75':
+    '0x137A72F2Bb85Bfeb921e7CFa907847a562d2d152':
       '0xba100000625a3754423978a60c9317c58a424e3d',
     // DAI
     '0x68194a729c2450ad26072b3d33adacbcef39d574':

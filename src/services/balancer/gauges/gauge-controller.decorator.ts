@@ -113,6 +113,7 @@ export class GaugeControllerDecorator {
     let thisWeekTimestamp = toUnixTimestamp(
       Math.floor(Date.now() / oneWeekInMs) * oneWeekInMs
     );
+
     // this makes sure we don't compute votes from before Mar31 in the "This period" entry,
     // since the system is not fully active between Mar31 and Apr6
     // (ie the first period starts on Apr7)
@@ -186,11 +187,13 @@ export class GaugeControllerDecorator {
    * so the network key can only be goerli (5) or mainnet (1).
    */
   private getNetwork(): Network {
-    if (isTestnet.value) {
-      return networkId.value;
-    } else {
-      return Network.MAINNET;
-    }
+    // if (isTestnet.value) {
+    //   return networkId.value;
+    // } else {
+    //   return Network.MAINNET;
+    // }
+    //TODO : Change this to mainnet later
+    return Network.SEPOLIA;
   }
 
   private resetMulticaller() {

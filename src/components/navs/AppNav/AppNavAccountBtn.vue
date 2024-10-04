@@ -30,6 +30,7 @@ const avatarSize = computed(() => {
   >
     <template #activator>
       <BalBtn
+        :outline="true"
         class="text-base"
         :class="{ btn: upToLargeBreakpoint }"
         :loading="isLoadingProfile"
@@ -43,7 +44,7 @@ const avatarSize = computed(() => {
           :address="account"
           :size="avatarSize"
         />
-        <span
+        <!-- <span
           v-if="profile && profile.ens"
           class="hidden lg:inline-block pl-2"
           v-text="profile && profile.ens"
@@ -52,7 +53,7 @@ const avatarSize = computed(() => {
           v-else
           class="hidden lg:inline-block pl-2 eth-address"
           v-text="shorten(account)"
-        />
+        /> -->
       </BalBtn>
     </template>
     <AppNavSettings />

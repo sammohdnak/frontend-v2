@@ -1,30 +1,4 @@
 <template>
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 28 28"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M25.6667 14H21L17.5 24.5L10.5 3.5L7 14H2.33334"
-      stroke="url(#activity-icon-0)"
-      stroke-width="4"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <defs>
-      <linearGradient
-        id="activity-icon-0"
-        x1="14"
-        y1="3.5"
-        x2="14"
-        y2="24.5"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stop-color="#66FFB1" />
-        <stop offset="1" stop-color="#10B981" />
-      </linearGradient>
-    </defs>
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="stroke-black dark:stroke-white opacity-90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+  
 </template>

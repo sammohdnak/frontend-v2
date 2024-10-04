@@ -176,7 +176,8 @@ export const crossChainSyncProvider = () => {
     return [...new Set(commonArr)];
   });
 
-  const hasError = computed(() => {
+  const hasError = false;
+  computed(() => {
     const hasVotingEscrowError = veBalSyncSupportedNetworks.some(network => {
       return crossChainNetworks[network].isError.value;
     });

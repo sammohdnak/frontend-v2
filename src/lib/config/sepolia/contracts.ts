@@ -12,7 +12,7 @@ const contracts: Contracts = {
   lidoRelayer: '',
   balancerHelpers: sepolia.BalancerHelpers,
   batchRelayer: sepolia.BalancerRelayer,
-  gaugeFactory: '',
+  gaugeFactory: '0x5c6F4dAF55029A74681B0665b0B1cd670a728b55',
   balancerMinter: sepolia.BalancerMinter,
   gaugeController: sepolia.GaugeController,
   tokenAdmin: sepolia.BalancerTokenAdmin,

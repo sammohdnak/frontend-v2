@@ -16,6 +16,7 @@ export function useLock({ enabled = true }: Options = {}) {
    * COMPOSABLES
    */
   const { lockablePoolId } = useVeBal();
+
   const { getToken, balanceFor } = useTokens();
 
   /**

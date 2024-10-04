@@ -52,10 +52,11 @@ export default function useVotingPoolsQuery(
     try {
       let apiVotingPools: ApiVotingPools;
       if (isTestnet.value) {
-        apiVotingPools = testnetVotingPools('GOERLI');
+        apiVotingPools = testnetVotingPools('SEPOLIA');
       } else {
         const api = getApi();
         const { veBalGetVotingList } = await api.VeBalGetVotingList();
+
         apiVotingPools = veBalGetVotingList;
       }
 

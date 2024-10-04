@@ -17,13 +17,32 @@ const classes = computed(() => ({
   'border-blue-600 dark:border-blue-400 text-blue-700 dark:text-blue-400':
     props.active,
 }));
+
+const isExternalLink = computed(() => {
+  return typeof props.to === 'string' && /^https?:\/\//.test(props.to);
+});
+
+const href = computed(() => {
+  return isExternalLink.value ? (props.to as string) : undefined;
+});
 </script>
 
 <template>
-  <router-link v-bind="props" :class="['desktop-link-item', classes]">
+  <template v-if="isExternalLink">
+    <a :href="href" :class="['desktop-link-item', classes]" target="_self">
+      <slot />
+    </a>
+  </template>
+  <template v-else>
+    <router-link v-bind="props" :class="['desktop-link-item', classes]">
+      <slot />
+      <PrefetchLinks v-if="prefetch" :to="props.to" />
+    </router-link>
+  </template>
+  <!-- <router-link  v-bind="props" :class="['desktop-link-item', classes]">
     <slot />
     <PrefetchLinks v-if="prefetch" :to="props.to" />
-  </router-link>
+  </router-link> -->
 </template>
 
 <style scoped>
@@ -38,7 +57,7 @@ const classes = computed(() => ({
 
   @apply top-0 left-0 w-full block absolute overflow-hidden transition-all;
 
-  border-top: 4px solid theme('colors.purple.600');
+  /* border-top: 4px solid theme('colors.purple.600'); */
   transform: translate3d(0%, -101%, 0);
 }
 

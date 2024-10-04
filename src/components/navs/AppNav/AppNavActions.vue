@@ -37,11 +37,12 @@ function connectWalletHandler() {
   <div class="grid grid-rows-1 grid-flow-col gap-2">
     <DarkModeToggle v-if="isDesktop" />
     <AppNavActivityBtn v-if="account" />
-    <FeedbackBtn v-if="isDesktop" />
+    <!-- <FeedbackBtn v-if="isDesktop" /> -->
     <AppNavAccountBtn v-if="account" />
     <BalBtn
       v-else
       color="white"
+      :outline="true"
       :size="isMobile ? 'md' : 'sm'"
       @click="connectWalletHandler"
     >
@@ -49,7 +50,7 @@ function connectWalletHandler() {
       <span class="hidden lg:inline-block" v-text="$t('connectWallet')" />
       <span class="lg:hidden" v-text="$t('connect')" />
     </BalBtn>
-    <AppNavNetworkSelect v-if="!hideNetworkSelect" />
+    <!-- <AppNavNetworkSelect v-if="!hideNetworkSelect" /> -->
     <BalBtn
       v-if="isMobile"
       color="white"

@@ -1,9 +1,9 @@
 {
-  "short_name": "Balancer",
-  "name": "Balancer",
-  "description": "Swap tokens and manage your assets on Balancer Protocol",
+  "short_name": "Tide",
+  "name": "Tide",
+  "description": "Swap tokens and manage your assets on Tide Protocol",
   "providedBy": {
-    "name": "Balancer",
+    "name": "Tide",
     "url": "https://balancer.fi"
   },
   "icons": [
@@ -13,7 +13,7 @@
       "type": "image/x-icon"
     }
   ],
-  "iconPath": "images/logos/logo512.png",
+  "iconPath": "images/logos/tide-logo.png",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

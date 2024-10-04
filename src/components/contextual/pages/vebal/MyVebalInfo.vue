@@ -271,7 +271,7 @@ function navigateToGetVeBAL() {
     <div class="hero-content">
       <div
         v-if="showVebalInfo"
-        class="flex flex-col xl:flex-row flex-grow gap-6 justify-between xl:items-center px-10 h-full text-white"
+        class="flex flex-col xl:flex-row flex-grow gap-6 justify-between xl:items-center px-10 h-full text-black dark:text-white"
       >
         <BalLoadingBlock v-if="isLoadingData" darker class="w-full h-full" />
         <div v-else class="flex flex-col flex-1">
@@ -367,6 +367,11 @@ function navigateToGetVeBAL() {
 }
 
 .chart-wrapper {
+  background-color: rgb(0 0 0 / 2%);
+  backdrop-filter: drop-shadow(40px 40px 80px rgb(0 0 0 / 50%));
+}
+
+.dark .chart-wrapper {
   background-color: rgb(0 0 0 / 80%);
   backdrop-filter: drop-shadow(40px 40px 80px rgb(0 0 0 / 50%));
 }
@@ -376,17 +381,17 @@ function navigateToGetVeBAL() {
 
   min-height: 440px;
   z-index: 0;
-  background-color: #0b0f19;
+  background-color: white;
 }
 
 .dark .hero-container {
-  background-color: #0e1420;
+  background-color: #0C111D;
 }
 
 .hero-container::before {
   content: ' ';
-  background-image: url('/images/patterns/fish-scale.png');
-  background-repeat: repeat;
+  /* background-image: url('/images/patterns/fish-scale.png'); */
+  /* background-repeat: repeat; */
 
   @apply block absolute left-0 top-0 w-full h-full opacity-10 z-0;
 }
@@ -397,8 +402,8 @@ function navigateToGetVeBAL() {
 
 .hero-container::after {
   content: ' ';
-  background: linear-gradient(45deg, rgb(0 0 0 / 100%), rgb(0 0 0 / 50%)),
-    url('/images/backgrounds/vebal-hero-noise.svg');
+  /* background: linear-gradient(45deg, rgb(0 0 0 / 100%), rgb(0 0 0 / 50%)),
+    url('/images/backgrounds/vebal-hero-noise.svg'); */
 
   @apply block absolute left-0 top-0 w-full h-full bg-no-repeat bg-cover opacity-20 z-0;
 

@@ -88,7 +88,7 @@ const featureAlert: Alert = {
     window.location.href = 'https://balancer.fi';
   },
 };
-const featureAlertEnabled = true;
+const featureAlertEnabled = false;
 if (featureAlertEnabled) addAlert(featureAlert);
 
 /**

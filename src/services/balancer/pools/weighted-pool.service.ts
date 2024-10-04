@@ -10,7 +10,7 @@ import { AddressZero } from '@ethersproject/constants';
 import { JsonRpcProvider, TransactionResponse } from '@ethersproject/providers';
 import { WalletProvider } from '@/dependencies/wallets/Web3Provider';
 import BigNumber from 'bignumber.js';
-import { formatUnits } from '@ethersproject/units';
+import { formatUnits, parseUnits } from '@ethersproject/units';
 
 import { PoolSeedToken } from '@/composables/pools/usePoolCreation';
 import { isSameAddress, scale } from '@/lib/utils';
@@ -18,7 +18,7 @@ import { configService } from '@/services/config/config.service';
 import { TransactionBuilder } from '@/services/web3/transactions/transaction.builder';
 import { getOldMulticaller } from '@/dependencies/OldMulticaller';
 import { POOLS } from '@/constants/pools';
-import WeightedPoolFactoryV4Abi from '@/lib/abi/WeightedPoolFactoryV4.json';
+import WeightedPoolFactoryV3Abi from '@/lib/abi/WeightedPoolFactoryBalV3.json';
 import { generateSalt } from '@/lib/utils/random';
 
 type Address = string;
@@ -47,30 +47,69 @@ export default class WeightedPoolService {
     owner: Address
   ): Promise<TransactionResponse> {
     if (!owner.length) return Promise.reject('No pool owner specified');
-
+console.log('PoolSeed Token',tokens,swapFee)
     const tokenAddresses: Address[] = tokens.map((token: PoolSeedToken) => {
       return token.tokenAddress;
     });
+
+    const tokensTuple = tokens.map((token) => ({
+      token: token.tokenAddress,
+      tokenType: 0,
+      rateProvider: POOLS.ZeroAddress,
+      paysYieldFees:false
+    }))
+
+    const normalizedWeights = tokens.map(token=>parseUnits(token.weight.toString(),16))
+
+
+    const roleAccounts = {
+      pauseManager: POOLS.ZeroAddress,
+      swapFeeManager: POOLS.ZeroAddress,
+      poolCreator: POOLS.ZeroAddress,
+    };
+
+    const swapFeePercentage = parseUnits("0.0001", 18); // 0.01% (100000000000000)
+
+    const poolHooksContract = POOLS.ZeroAddress;
+  const enableDonation = false;
+  const disableUnbalancedLiquidity = false;
+  const salt =
+    "0x0000000000000000000000000000000000000000000000000000000000000002";
+
+
 
     const seedTokens = this.calculateTokenWeights(tokens);
     const swapFeeScaled = scale(new BigNumber(swapFee), 18);
     const rateProviders = Array(tokenAddresses.length).fill(POOLS.ZeroAddress);
 
+    // const params = [
+    //   name,
+    //   symbol,
+    //   tokenAddresses,
+    //   seedTokens,
+    //   rateProviders,
+    //   swapFeeScaled.toString(),
+    //   owner,
+    //   generateSalt(),
+    // ];
+
     const params = [
       name,
       symbol,
-      tokenAddresses,
-      seedTokens,
-      rateProviders,
-      swapFeeScaled.toString(),
-      owner,
-      generateSalt(),
-    ];
+      tokensTuple,
+      normalizedWeights,
+      roleAccounts,
+      swapFeePercentage,
+      poolHooksContract,
+      enableDonation,
+      disableUnbalancedLiquidity,
+      salt
+    ]
 
     const txBuilder = new TransactionBuilder(provider.getSigner());
     return await txBuilder.contract.sendTransaction({
       contractAddress: configService.network.addresses.weightedPoolFactory,
-      abi: WeightedPoolFactoryV4Abi,
+      abi: WeightedPoolFactoryV3Abi,
       action: 'create',
       params,
     });

@@ -51,7 +51,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <AppNavAlert v-if="currentAlert" :alert="currentAlert" />
+  <!-- <AppNavAlert v-if="currentAlert" :alert="currentAlert" /> -->
   <nav id="app-nav" ref="appNav" class="sticky top-0 lg:px-6 pr-1 pl-4 h-20">
     <div class="flex justify-between items-center h-full">
       <div class="flex items-center h-full">
@@ -74,7 +74,7 @@ onUnmounted(() => {
 <style scoped>
 #app-nav {
   @apply w-full z-30;
-  @apply bg-white dark:bg-gray-900;
+  @apply bg-white dark:bg-[#0C111D];
   @apply border-b border-transparent;
 
   transition: all 0.2s ease-in-out;
