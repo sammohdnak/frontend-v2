@@ -36,7 +36,7 @@ function navigateToGetVeBAL() {
 <template>
   <div class="flex flex-col md:flex-row">
     <div class="py-8 lg:py-4 px-4 lg:px-8 2xl:px-0 xl:pt-0 max-w-md hero-text">
-      <p class="font-medium eyebrow">veBAL</p>
+      <p class="mb-4 font-medium text-black dark:text-white">veBAL</p>
       <h1 class="mb-5 text-black dark:text-white title">
         {{ $t('veBAL.hero.title') }}
       </h1>
@@ -140,14 +140,14 @@ function navigateToGetVeBAL() {
 </template>
 
 <style scoped>
-.eyebrow {
+/* .eyebrow {
   @apply mb-4;
 
   color: #ccb373;
   background: linear-gradient(#ccb373, #977622);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .hero-text {
   @apply opacity-0;
