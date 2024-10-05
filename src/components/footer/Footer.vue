@@ -17,6 +17,49 @@ import { useAppzi } from '@/composables/useAppzi';
 const { networkSlug } = useNetwork();
 const { handleThirdPartyModalToggle } = useThirdPartyServices();
 const { openNpsModal } = useAppzi();
+
+const linkSections= [
+   
+   {
+     title: 'Product',
+     links: [
+       { label: 'Explore pools', href: '/pools' },
+       { label: 'Swap tokens', href: '/swap' },
+       { label: 'View portfolio', href: '/portfolio' },
+       { label: 'Get veBAL', href: 'https://app.balancer.fi/#/vebal', isExternal: true },
+       {
+         label: 'Create an LBP',
+         href: 'https://www.fjordfoundry.com/?utm_source=balancer&utm_medium=website',
+         isExternal: true,
+       },
+       {
+         label: 'Create an NFT drop',
+         href: 'https://fjordnfts.com/?utm_source=balancer&utm_medium=website',
+         isExternal: true,
+       },
+     ],
+   },
+   {
+     title: 'Resources',
+     links: [
+       { label: 'Forum', href: 'https://forum.balancer.fi', isExternal: true },
+       { label: 'Governance', href: 'https://vote.balancer.fi', isExternal: true },
+       {
+         label: 'Bug bounties',
+         href: 'https://immunefi.com/bug-bounty/balancer',
+         isExternal: true,
+       },
+       { label: 'Dune Analytics', href: 'https://dune.com/balancer', isExternal: true },
+       { label: 'Defilytica', href: 'https://balancer.defilytica.com', isExternal: true },
+       {
+         label: 'Brand assets',
+         href: 'https://github.com/balancer/brand-assets',
+         isExternal: true,
+       },
+     ],
+   },
+]
+ 
 </script>
 
 <template>
@@ -28,14 +71,18 @@ const { openNpsModal } = useAppzi();
         class="flex flex-col md:flex-row gap-8 md:justify-between py-12 px-4 lg:px-0 text-primary"
       >
         <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-2">
+
+         
           <router-link
             class="font-medium link"
             :to="{ name: 'home', params: { networkSlug } }"
           >
             <AppLogo class="mb-4" />
           </router-link>
-
-          <div class="flex md:hidden flex-col gap-2">
+          <p> Tide is a battle-tested toolkit for true AMM experimentation and innovation.</p>
+        </div>
+          <!-- <div class="flex md:hidden flex-col gap-2">
             <p>
               <router-link
                 class="text-lg font-medium link"
@@ -76,7 +123,7 @@ const { openNpsModal } = useAppzi();
                 {{ $t('vebal') }}
               </router-link>
             </p>
-          </div>
+          </div> -->
 
           <div class="flex flex-wrap md:order-3 gap-3 md:gap-4">
             <BalLink

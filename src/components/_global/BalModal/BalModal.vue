@@ -115,7 +115,7 @@ defineExpose({ hide });
   @apply mx-auto h-full rounded-b-none sm:rounded-b-lg dark:border-0 relative;
 }
 
-.dark .bal-modal .content::before {
+/* .dark .bal-modal .content::before {
   background-blend-mode: soft-light, soft-light, normal;
   background: radial-gradient(circle at left, yellow, transparent),
     radial-gradient(circle at bottom right, blue, transparent),
@@ -133,7 +133,7 @@ defineExpose({ hide });
   filter: blur(80px);
   transform: translateZ(-1px);
   animation: fadeInMoveUpScaleUp 0.2s ease-out both;
-}
+} */
 
 /* Overlay animation */
 .overlay-enter-active,

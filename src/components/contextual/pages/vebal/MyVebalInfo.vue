@@ -225,9 +225,9 @@ const futureLockChartData = computed(() => {
 
 const chartData = computed(() => {
   return {
-    color: ['#BCA25D', '#BCA25D'],
+    color: ['#2970FF', '#528BFF'],
     hoverBorderColor: 'black',
-    hoverColor: '#BCA25D',
+    hoverColor: '#2970FF',
     areaStyle: {
       color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
         {
@@ -273,7 +273,7 @@ function navigateToGetVeBAL() {
         v-if="showVebalInfo"
         class="flex flex-col xl:flex-row flex-grow gap-6 justify-between xl:items-center px-10 h-full text-black dark:text-white"
       >
-        <BalLoadingBlock v-if="isLoadingData" darker class="w-full h-full" />
+        <BalLoadingBlock v-if="isLoadingData"  class="w-full h-full" />
         <div v-else class="flex flex-col flex-1">
           <div class="mb-2 text-xl font-bold">My veBAL</div>
           <div class="mb-10 text-5xl font-black">
@@ -301,7 +301,7 @@ function navigateToGetVeBAL() {
             </BalBtn>
           </div>
         </div>
-        <BalLoadingBlock v-if="isLoadingData" darker class="w-full h-full" />
+        <BalLoadingBlock v-if="isLoadingData"  class="w-full h-full" />
 
         <div
           v-else-if="chartData.data[0].values.length > 0"
@@ -385,7 +385,7 @@ function navigateToGetVeBAL() {
 }
 
 .dark .hero-container {
-  background-color: #0c111d;
+  background-color: transparent;
 }
 
 .hero-container::before {

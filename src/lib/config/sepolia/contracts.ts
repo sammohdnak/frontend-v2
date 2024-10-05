@@ -7,6 +7,8 @@ const contracts: Contracts = {
   multicall: '0xca11bde05977b3631167028862be2a173976ca11',
   authorizer: sepolia.Authorizer,
   vault: sepolia.Vault,
+  router: sepolia.Router,
+  permit2: sepolia.Permit2,
   weightedPoolFactory: sepolia.WeightedPoolFactory,
   stablePoolFactory: sepolia.ComposableStablePoolFactory,
   lidoRelayer: '',

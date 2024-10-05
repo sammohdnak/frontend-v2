@@ -35,6 +35,8 @@ export interface Contracts {
   multicall: string;
   authorizer: string;
   vault: string;
+  router?: string;
+  permit2?: string;
   weightedPoolFactory: string;
   stablePoolFactory: string;
   lidoRelayer: string;

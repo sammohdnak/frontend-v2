@@ -122,7 +122,7 @@ onBeforeMount(async () => {
 
   const approvalActions = await getTokenApprovalActions({
     amountsToApprove,
-    spender: networkConfig.addresses.vault,
+    spender: networkConfig.addresses.permit2!,
     actionType: ApprovalAction.AddLiquidity,
   });
   actions.value = [...approvalActions, ...actions.value];

@@ -46,25 +46,30 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: HomePage,
+    component: VeBalPage,
+    // component: HomePage,
   },
   {
     path: '/terms-of-use',
     name: 'terms-of-use',
-    component: TermsOfUsePage,
-    meta: { layout: 'ContentLayout' },
+    
+    component: VeBalPage,
+    // component: TermsOfUsePage,
+    // meta: { layout: 'ContentLayout' },
   },
   {
     path: '/privacy-policy',
     name: 'privacy-policy',
-    component: PrivacyPolicyPage,
-    meta: { layout: 'ContentLayout' },
+    component: VeBalPage,
+    // component: PrivacyPolicyPage,
+    // meta: { layout: 'ContentLayout' },
   },
   {
     path: '/cookies-policy',
     name: 'cookies-policy',
-    component: CookiesPolicyPage,
-    meta: { layout: 'ContentLayout' },
+    component: VeBalPage,
+    // component: CookiesPolicyPage,
+    // meta: { layout: 'ContentLayout' },
   },
   {
     path: '/risks',

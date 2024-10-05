@@ -3,6 +3,8 @@ import {
   Vault__factory,
   WeightedPool__factory,
   WeightedPoolFactory__factory,
+  StablePoolFactory__factory,
+  StablePool__factory
 } from '@balancer-labs/typechain';
 import { defaultAbiCoder } from '@ethersproject/abi';
 import { BigNumber as EPBigNumber } from '@ethersproject/bignumber';
@@ -18,7 +20,7 @@ import { configService } from '@/services/config/config.service';
 import { TransactionBuilder } from '@/services/web3/transactions/transaction.builder';
 import { getOldMulticaller } from '@/dependencies/OldMulticaller';
 import { POOLS } from '@/constants/pools';
-import WeightedPoolFactoryV3Abi from '@/lib/abi/WeightedPoolFactoryBalV3.json';
+import StablePoolFactoryV3Abi from '@/lib/abi/StablePoolFactoryBalV3.json';
 import { generateSalt } from '@/lib/utils/random';
 import { permit2Signature } from './permit2Sign';
 import { routerAbi } from './routerABI';
@@ -100,7 +102,7 @@ export default class WeightedPoolService {
       name,
       symbol,
       tokensTuple,
-      normalizedWeights,
+      normalizedWeights,//change to amplificaion
       roleAccounts,
       swapFeePercentage,
       poolHooksContract,
@@ -114,7 +116,7 @@ export default class WeightedPoolService {
   
     return await txBuilder.contract.sendTransaction({
       contractAddress: configService.network.addresses.weightedPoolFactory,
-      abi: WeightedPoolFactoryV3Abi,
+      abi: StablePoolFactoryV3Abi,
       action: 'create',
       params,
     });
