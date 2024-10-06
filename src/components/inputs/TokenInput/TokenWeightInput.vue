@@ -6,6 +6,7 @@ import TokenSelectInput from '@/components/inputs/TokenSelectInput/TokenSelectIn
 import { useTokens } from '@/providers/tokens.provider';
 import { TokenInfo } from '@/types/TokenList';
 import { useI18n } from 'vue-i18n';
+import usePoolCreation from '@/composables/pools/usePoolCreation';
 
 /**
  * TYPES
@@ -56,6 +57,7 @@ const lockPath = ref<HTMLElement>();
 const lockIcon = ref<HTMLElement>();
 const isLocked = ref(false);
 
+const {isWeightedPool} =usePoolCreation()
 /**
  * COMPOSABLEs
  */
@@ -136,6 +138,7 @@ watchEffect(() => {
 
 <template>
   <BalTextInput
+  :hidden="!isWeightedPool"
     v-model="_weight"
     name="weight"
     :placeholder="hintAmount || '0.0'"
@@ -176,7 +179,7 @@ watchEffect(() => {
         />
       </div>
     </template>
-    <template #append>
+    <template #append v-if="isWeightedPool">
       <BalStack align="center" horizontal spacing="none">
         <BalIcon name="percent" size="sm" class="mt-3 text-gray-600" />
         <button

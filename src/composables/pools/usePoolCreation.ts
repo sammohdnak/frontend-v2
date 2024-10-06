@@ -22,6 +22,7 @@ import { useTokens } from '@/providers/tokens.provider';
 import { PoolType } from '@balancer-labs/sdk';
 import { wNativeAssetAddress } from '../usePoolHelpers';
 import { isTestnet } from '../useNetwork';
+import { CreatePoolReturn } from '@/services/balancer/pools/stable-pool.service';
 
 export const POOL_CREATION_STATE_VERSION = '1.0';
 export const POOL_CREATION_STATE_KEY = 'poolCreationState';
@@ -59,6 +60,7 @@ const emptyPoolCreationState = {
   poolAddress: '',
   symbol: '',
   manuallySetToken: '' as string,
+  amplificationFactor:10,
   autoOptimiseBalances: false,
   useNativeAsset: false,
   type: PoolType.Weighted,
@@ -206,10 +208,17 @@ export default function usePoolCreation() {
     switch (poolCreationState.type) {
       case PoolType.Weighted:
         return 'weighted';
+        case PoolType.Stable:
+          return 'stable';
       default:
         return '';
     }
   });
+
+  const isWeightedPool = computed(()=>poolCreationType.value == PoolType.Weighted)
+
+
+  const poolCreationType = computed((): string => poolCreationState.type);
 
   const tokensWithNoPrice = computed(() => {
     const validTokens = tokensList.value.filter(t => t !== '');
@@ -326,6 +335,10 @@ export default function usePoolCreation() {
     poolCreationState.feeType = type;
   }
 
+  function setPoolCreationType(type: PoolType) {
+    poolCreationState.type = type;
+  }
+
   function setStep(step: number) {
     poolCreationState.activeStep = step;
   }
@@ -428,15 +441,28 @@ export default function usePoolCreation() {
       throw new Error('Invalid pool creation due to unlisted tokens.');
     }
     const provider = getProvider();
-
-    const tx = await balancerService.pools.weighted.create(
-      provider,
-      poolCreationState.name,
-      poolCreationState.symbol,
-      poolCreationState.initialFee,
-      poolCreationState.seedTokens,
-      poolOwner.value
-    );
+    let tx: TransactionResponse
+    if (isWeightedPool) {
+      tx = await balancerService.pools.weighted.create(
+        provider,
+        poolCreationState.name,
+        poolCreationState.symbol,
+        poolCreationState.initialFee,
+        poolCreationState.seedTokens,
+        poolOwner.value
+      );
+    } else {
+      tx = await balancerService.pools.stable.create(
+        provider,
+        poolCreationState.name,
+        poolCreationState.symbol,
+        poolCreationState.initialFee,
+        poolCreationState.seedTokens,
+        poolOwner.value,
+        poolCreationState.amplificationFactor
+      );
+    }
+    
     poolCreationState.createPoolTxHash = tx.hash;
     saveState();
 
@@ -476,14 +502,27 @@ export default function usePoolCreation() {
         return token.tokenAddress;
       }
     );
-    const tx = await balancerService.pools.weighted.initJoin(
-      provider,
-      poolCreationState.poolId,
-      account.value,
-      account.value,
-      tokenAddresses,
-      getScaledAmounts()
-    );
+    let tx: TransactionResponse
+    if (isWeightedPool) {
+       tx = await balancerService.pools.weighted.initJoin(
+        provider,
+        poolCreationState.poolId,
+        account.value,
+        account.value,
+        tokenAddresses,
+        getScaledAmounts()
+      );
+    } else {
+       tx = await balancerService.pools.stable.initJoin(
+        provider,
+        poolCreationState.poolId,
+        account.value,
+        account.value,
+        tokenAddresses,
+        getScaledAmounts()
+      );
+    }
+   
 
     addTransaction({
       id: tx.hash,
@@ -537,11 +576,21 @@ export default function usePoolCreation() {
   }
 
   async function retrievePoolAddress(hash: string) {
-    const response =
+    let response: CreatePoolReturn | null
+    if (isWeightedPool) {
+      response =
       await balancerService.pools.weighted.retrievePoolIdAndAddress(
         getProvider(),
         hash
       );
+    } else {
+      response =
+      await balancerService.pools.stable.retrievePoolIdAndAddress(
+        getProvider(),
+        hash
+      );
+    }
+    
     if (response !== null) {
       poolCreationState.poolId = response.id;
       poolCreationState.poolAddress = response.address;
@@ -552,10 +601,26 @@ export default function usePoolCreation() {
 
   // when restoring from a pool creation transaction (not from localstorage)
   async function retrievePoolDetails(hash: string) {
-    const details = await balancerService.pools.weighted.retrievePoolDetails(
-      getProvider(),
-      hash
-    );
+    let details: {
+      weights: any;
+      name: any;
+      owner: any;
+      symbol: any;
+      tokens: any;
+    } | undefined
+    
+    if (isWeightedPool) {
+       details = await balancerService.pools.weighted.retrievePoolDetails(
+        getProvider(),
+        hash
+      );
+    } else {
+      details = await balancerService.pools.stable.retrievePoolDetails(
+        getProvider(),
+        hash
+      );
+    }
+   
     if (!details) return;
     poolCreationState.seedTokens = details.tokens
       .map((token, i) => {
@@ -623,9 +688,12 @@ export default function usePoolCreation() {
     poolLiquidity,
     poolTypeString,
     tokenColors,
+    isWeightedPool,
     isWrappedNativeAssetPool,
     hasUnlistedToken,
     hasRestoredFromSavedState,
     isUnlistedToken,
+    setPoolCreationType,
+    poolCreationType,
   };
 }

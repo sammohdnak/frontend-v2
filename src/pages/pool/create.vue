@@ -25,6 +25,7 @@ import { useTokens } from '@/providers/tokens.provider';
 import { lsGet, selectByAddress } from '@/lib/utils';
 import useWeb3 from '@/services/web3/useWeb3';
 import { StepState } from '@/types';
+import { PoolType } from '@balancer-labs/sdk';
 
 /**
  * STATE
@@ -48,6 +49,9 @@ const {
   resetPoolCreationState,
   retrievePoolAddress,
   retrievePoolDetails,
+  setPoolCreationType,
+  isWeightedPool,
+  poolCreationType,
 } = usePoolCreation();
 const { removeAlert } = useAlerts();
 const { t } = useI18n();
@@ -111,14 +115,15 @@ const hasUnknownToken = computed(() =>
   validTokens.value.some(t => priceFor(t) === 0)
 );
 
+
 const steps = computed(() => [
   {
-    tooltip: 'Choose tokens & weights',
+    tooltip: isWeightedPool.value?'Choose tokens & weights':'Choose tokens',
     state: getStepState(0),
     label: 1,
   },
   {
-    tooltip: 'Set pool fees',
+    tooltip: isWeightedPool.value?'Set pool fees':'Set pool fees & Ampl Factor',
     state: getStepState(1),
     label: 2,
   },
@@ -207,6 +212,25 @@ watch(
     immediate: true,
   }
 );
+
+
+
+const creationTitle = computed(() =>
+isWeightedPool.value?'Create a weighted pool steps':'Create a stable pool steps'
+);
+
+
+
+const handleToggle = () => {
+  if (isWeightedPool.value) {
+    setPoolCreationType(PoolType.Stable)
+  } else {
+    setPoolCreationType(PoolType.Weighted)
+  }
+  
+ 
+}
+
 </script>
 
 <template>
@@ -215,8 +239,14 @@ watch(
       <template #gutterLeft>
         <div v-if="!upToLargeBreakpoint" class="col-span-3">
           <BalStack vertical>
+            <BalToggle
+              name="createPoolType"
+              :checked="poolCreationType == PoolType.Weighted"
+              @toggle="handleToggle"
+            />
+            <p class="capitalize">{{poolCreationType}} Pool</p>
             <BalVerticalSteps
-              title="Create a weighted pool steps"
+              :title="creationTitle"
               :steps="steps"
               @navigate="handleNavigate"
             />

@@ -40,6 +40,7 @@ const {
   totalLiquidity,
   hasUnlistedToken,
   isUnlistedToken,
+  isWeightedPool
 } = usePoolCreation();
 const { upToLargeBreakpoint } = useBreakpoints();
 const { fNum } = useNumbers();
@@ -329,7 +330,7 @@ function onAlertMountChange() {
                 class="flex justify-between p-2 px-4 w-full bg-gray-50 dark:bg-gray-850"
               >
                 <h6>{{ $t('token') }}</h6>
-                <h6>{{ $t('weight') }}</h6>
+                <h6 v-if="isWeightedPool">{{ $t('weight') }}</h6>
               </div>
               <div class="relative w-full">
                 <div

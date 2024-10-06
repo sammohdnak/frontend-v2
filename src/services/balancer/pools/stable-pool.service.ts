@@ -42,14 +42,15 @@ export interface JoinPoolRequest {
   fromInternalBalance: boolean;
 }
 
-export default class WeightedPoolService {
+export default class StablePoolService {
   public async create(
     provider: WalletProvider,
     name: string,
     symbol: string,
     swapFee: string,
     tokens: PoolSeedToken[],
-    owner: Address
+    owner: Address,
+    amplificationFactor:number,
   ): Promise<TransactionResponse> {
     if (!owner.length) return Promise.reject('No pool owner specified');
     console.log('PoolSeed Token', tokens, swapFee)
@@ -102,7 +103,7 @@ export default class WeightedPoolService {
       name,
       symbol,
       tokensTuple,
-      normalizedWeights,//change to amplificaion
+      amplificationFactor,//change to amplificaion
       roleAccounts,
       swapFeePercentage,
       poolHooksContract,
@@ -115,7 +116,7 @@ export default class WeightedPoolService {
 
   
     return await txBuilder.contract.sendTransaction({
-      contractAddress: configService.network.addresses.weightedPoolFactory,
+      contractAddress: configService.network.addresses.stablePoolFactory,
       abi: StablePoolFactoryV3Abi,
       action: 'create',
       params,
@@ -129,17 +130,17 @@ export default class WeightedPoolService {
     const receipt = await provider.getTransactionReceipt(createHash);
     if (!receipt) return null;
 
-    const weightedPoolFactoryInterface =
-      WeightedPoolFactory__factory.createInterface();
+    const stablePoolFactoryInterface =
+      StablePoolFactory__factory.createInterface();
 
     const poolCreationEvent = receipt.logs
       .filter(
         log =>
-          log.address === configService.network.addresses.weightedPoolFactory
+          log.address === configService.network.addresses.stablePoolFactory
       )
       .map(log => {
         try {
-          return weightedPoolFactoryInterface.parseLog(log);
+          return stablePoolFactoryInterface.parseLog(log);
         } catch {
           return null;
         }
@@ -172,7 +173,7 @@ export default class WeightedPoolService {
 
     const Multicaller = getOldMulticaller();
     const multicaller = new Multicaller(configService.network.key, provider, [
-      ...WeightedPool__factory.abi,
+      ...StablePool__factory.abi,
       ...Vault__factory.abi,
     ]);
 

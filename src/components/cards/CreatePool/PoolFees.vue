@@ -41,6 +41,8 @@ const {
   proceed,
   goBack,
   isLoadingSimilarPools,
+  amplificationFactor,
+  isWeightedPool
 } = usePoolCreation();
 const { account } = useWeb3();
 const { networkConfig } = useNetwork();
@@ -153,11 +155,31 @@ watch(fee, onCustomInput, { immediate: true });
             >
               <BalIcon class="flex" name="chevron-left" />
             </button>
-            <h5 class="font-semibold dark:text-gray-300">
+            <h5 class="font-semibold dark:text-gray-300"  v-if="isWeightedPool">
               {{ $t('createAPool.setPoolFees') }}
+            </h5>
+            <h5 class="font-semibold dark:text-gray-300"  v-if="!isWeightedPool">
+              Set Pool Fees & Amplification Factor
             </h5>
           </BalStack>
         </BalStack>
+        <BalStack vertical spacing="sm" v-if="!isWeightedPool">
+          <div>
+            <h6 class="mb-1">Amplification Factor : {{ amplificationFactor }}x</h6>
+            
+          </div>
+          <div :class="['custom-input', customInputClasses,'flex items-center p-4 w-fit']">
+                <input
+                  v-model="amplificationFactor"
+                  class="w-12 h-full text-right bg-transparent"
+                  placeholder="1000"
+                  type="number"
+                  step="any"
+                />
+                <div class="px-1 mb-1.5">x</div>
+              </div>
+        </BalStack>
+
         <BalStack vertical spacing="sm">
           <div>
             <h6 class="mb-1">Initial swap fee</h6>
