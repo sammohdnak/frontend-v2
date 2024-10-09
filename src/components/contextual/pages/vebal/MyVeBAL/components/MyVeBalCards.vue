@@ -13,6 +13,7 @@ import { VeBalLockInfo } from '@/services/balancer/contracts/contracts/veBAL';
 import { Pool } from '@/services/pool/types';
 import useWeb3 from '@/services/web3/useWeb3';
 import { TokenInfo } from '@/types/TokenList';
+import { configService } from '@/services/config/config.service';
 
 /**
  * TYPES
@@ -135,6 +136,15 @@ const cards = computed(() => {
     <div class="flex">
       <template v-if="card.id === 'unlockedVeBAL'">
         <BalBtn
+          tag="a"
+          :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools/${networkSlug}/v3/${lockablePoolId}/add-liquidity`"
+          color="white"
+          class="mr-4 text-black dark:text-white hero-btn"
+          outline
+        >
+          {{ $t('addLiquidity') }}
+        </BalBtn>
+        <!-- <BalBtn
           color="blue"
           outline
           class="mr-3"
@@ -147,7 +157,7 @@ const cards = computed(() => {
           "
         >
           {{ $t('addLiquidity') }}
-        </BalBtn>
+        </BalBtn> -->
         <BalBtn
           color="blue"
           outline
