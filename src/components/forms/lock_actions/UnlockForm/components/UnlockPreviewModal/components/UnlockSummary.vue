@@ -50,7 +50,7 @@ const { veBalTokenInfo } = useVeBal();
         </div>
         <div>
           {{ fNum(0, FNumFormats.token) }}
-          {{ veBalTokenInfo?.symbol }}
+          veTIDE
         </div>
       </div>
       <div class="summary-item-row">

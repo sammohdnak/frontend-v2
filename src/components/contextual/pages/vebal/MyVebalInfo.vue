@@ -258,9 +258,9 @@ const chartData = computed(() => {
  */
 function navigateToGetVeBAL() {
   router.push({
-    name: 'get-vebal',
+    name: 'get-veTide',
     query: {
-      returnRoute: 'vebal',
+      returnRoute: 'veTide',
     },
   });
 }
@@ -275,7 +275,7 @@ function navigateToGetVeBAL() {
       >
         <BalLoadingBlock v-if="isLoadingData"  class="w-full h-full" />
         <div v-else class="flex flex-col flex-1">
-          <div class="mb-2 text-xl font-bold">My veBAL</div>
+          <div class="mb-2 text-xl font-bold">My veTIDE</div>
           <div class="mb-10 text-5xl font-black">
             {{ fNum(veBalBalance, FNumFormats.token) }}
           </div>

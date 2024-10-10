@@ -11,6 +11,7 @@ import useWeb3 from '@/services/web3/useWeb3';
 import { TransactionActionInfo } from '@/types/transactions';
 import useTokenApprovalActions from '@/composables/approvals/useTokenApprovalActions';
 import { ApprovalAction } from '@/composables/approvals/types';
+import { configService } from '@/services/config/config.service';
 
 /**
  * TYPES
@@ -176,15 +177,17 @@ function handleSuccess(details: any): void {
         </BalLink>
       </div>
       <BalBtn
-        tag="router-link"
-        :to="{ name: 'pool', params: { networkSlug, id: poolId } }"
-        color="gray"
+          tag="a"
+          :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools/${networkSlug}/v3/${poolId}`"
+          color="gray"
         outline
         block
         class="mt-2"
-      >
+         
+        >
         {{ $t('viewPool') }}
-      </BalBtn>
+        </BalBtn>
+      
     </template>
   </div>
 </template>

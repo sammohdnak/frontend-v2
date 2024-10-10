@@ -49,8 +49,8 @@ function handleInternalClose() {
           color="gradient"
           @click="
             router.push({
-              name: 'vebal',
-              params: { networkSlug: getNetworkSlug(Network.MAINNET) },
+              name: 'veTide',
+              params: { networkSlug: getNetworkSlug(Network.SEPOLIA) },
             })
           "
         />

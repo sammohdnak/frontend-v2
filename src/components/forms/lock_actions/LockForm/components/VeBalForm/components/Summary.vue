@@ -31,7 +31,7 @@ const { veBalTokenInfo } = useVeBal();
             ? fNum(expectedVeBalAmount, FNumFormats.token)
             : '-'
         }}
-        {{ veBalTokenInfo?.symbol }}
+        veTIDE
       </div>
     </div>
   </div>

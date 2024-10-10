@@ -179,17 +179,17 @@ watch(account, (_, prevAccount) => {
 
     <VotingAlert
       v-if="noVeBalBalance && !isLoading"
-      title="You need some veBAL to vote on gauges"
+      title="You need some veTIDE to vote on gauges"
     >
-      Get veBAL by locking up LP tokens from the 80% BAL / 20% WETH pool.
+      Get veTIDE by locking up LP tokens from the 80% BAL / 20% WETH pool.
     </VotingAlert>
 
     <VotingAlert
       v-if="veBalExpired"
-      title="You can't vote because your veBAL has expired"
+      title="You can't vote because your veTIDE has expired"
     >
-      You need some veBAL to vote on gauges. Unlock and relock your
-      B-80BAL-20-WETH to get some veBAL.
+      You need some veTIDE to vote on gauges. Unlock and relock your
+      B-80TIDE-20-WETH to get some veTIDE.
     </VotingAlert>
 
     <VotingAlert
@@ -289,7 +289,7 @@ watch(account, (_, prevAccount) => {
         <div v-if="isWalletReady" class="flex-0 ml-5 w-32 h-8">
           <BalBtn
             :tag="votingDisabled ? 'div' : 'router-link'"
-            :to="{ name: 'vebal-voting', params: { networkSlug } }"
+            :to="{ name: 'veTide-voting', params: { networkSlug } }"
             :label="hasSubmittedVotes ? 'Edit votes' : 'Vote'"
             color="gradient"
             :disabled="votingDisabled"

@@ -74,7 +74,7 @@ const cards = computed(() => {
   return [
     {
       id: 'unlockedVeBAL',
-      label: 'Unlocked ve8020 BAL/WETH',
+      label: 'Unlocked ve8020 TIDE/WETH',
       icon: unlock,
       iconBgColor: 'bg-blue-100',
       value: fNum(bptBalance.value, FNumFormats.token),
@@ -82,7 +82,7 @@ const cards = computed(() => {
     },
     {
       id: 'lockedVeBAL',
-      label: 'Locked ve8020 BAL/WETH',
+      label: 'Locked ve8020 TIDE/WETH',
       icon: lock,
       iconBgColor: 'bg-blue-50',
       value: fNum(props.veBalLockInfo?.lockedAmount ?? '0', FNumFormats.token),
@@ -163,10 +163,10 @@ const cards = computed(() => {
           outline
           :disabled="Number(bptBalance) === 0"
           @click="
-            $router.push({ name: 'get-vebal', query: { returnRoute: 'vebal' } })
+            $router.push({ name: 'get-veTide', query: { returnRoute: 'veTide' } })
           "
         >
-          Lock for veBAL
+          Lock for veTIDE
         </BalBtn>
       </template>
 
@@ -187,7 +187,7 @@ const cards = computed(() => {
           outline
           class="mr-3"
           @click="
-            $router.push({ name: 'get-vebal', query: { returnRoute: 'vebal' } })
+            $router.push({ name: 'get-veTide', query: { returnRoute: 'veTide' } })
           "
         >
           Extend lock

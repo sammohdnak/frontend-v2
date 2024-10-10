@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 import { isTestnet } from '@/composables/useNetwork';
 import { applyNavGuards } from './nav-guards';
+import { configService } from '@/services/config/config.service';
 
 const ClaimPage = () => import('@/pages/claim/index.vue');
 const LegacyClaimPage = () => import('@/pages/claim/legacy.vue');
@@ -42,50 +43,68 @@ declare module 'vue-router' {
   }
 }
 
+const mainFeURL = `${configService.env.VITE_APP_MAIN_FE_URL}/pools`
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: VeBalPage,
-    // component: HomePage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/terms-of-use',
     name: 'terms-of-use',
     
-    component: VeBalPage,
-    // component: TermsOfUsePage,
-    // meta: { layout: 'ContentLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/privacy-policy',
     name: 'privacy-policy',
-    component: VeBalPage,
-    // component: PrivacyPolicyPage,
-    // meta: { layout: 'ContentLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/cookies-policy',
     name: 'cookies-policy',
-    component: VeBalPage,
+    // component: VeBalPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
     // component: CookiesPolicyPage,
     // meta: { layout: 'ContentLayout' },
   },
   {
     path: '/risks',
     name: 'risks',
-    component: RisksPage,
-    meta: { layout: 'ContentLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/recovery-exit',
     name: 'recovery-exit',
-    component: RecoveryExitPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/swap/:assetIn?/:assetOut?',
     name: 'swap',
-    component: SwapPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/pool/create/:tx?',
@@ -96,42 +115,49 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/:networkSlug/pool/:id',
     name: 'pool',
-    component: PoolPage,
-    meta: { layout: 'PoolLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/pool/:id/add-liquidity',
     name: 'add-liquidity',
-    component: PoolAddLiquidityPage,
-    meta: { layout: 'PoolLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/pool/:id/invest',
     name: 'invest-redirect',
     redirect: to => {
-      return `/${to.params.networkSlug}/pool/${to.params.id}/add-liquidity`;
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
     },
   },
   {
     path: '/:networkSlug/pool/:id/withdraw',
     name: 'withdraw',
-    component: PoolWithdrawPage,
-    meta: { layout: 'PoolLayout' },
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
-    path: '/:networkSlug/vebal',
-    name: 'vebal',
+    path: '/:networkSlug/veTide',
+    name: 'veTide',
     component: VeBalPage,
   },
   {
-    path: '/:networkSlug/vebal-voting',
-    name: 'vebal-voting',
+    path: '/:networkSlug/veTide-voting',
+    name: 'veTide-voting',
     component: VeBalVotingPage,
     meta: { layout: 'FocussedLayout' },
   },
   {
-    path: '/:networkSlug/get-vebal',
-    name: 'get-vebal',
+    path: '/:networkSlug/get-veTide',
+    name: 'get-veTide',
     component: GetVeBalPage,
     meta: { layout: 'FocussedLayout' },
   },
@@ -144,32 +170,47 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/:networkSlug/claim',
     name: 'claim',
-    component: ClaimPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/claim/legacy',
     name: 'legacy-claim',
-    component: LegacyClaimPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/portfolio',
     name: 'portfolio',
-    component: PortfolioPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/balances',
     name: 'balances',
-    component: BalancesPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug/claim-submission',
     name: 'claim-submission',
-    component: ClaimSubmissionsPage,
+    redirect: to => {
+      window.location.href = mainFeURL
+      return '/redirecting' // not important since redirecting
+    },
   },
   {
     path: '/:networkSlug?',
     name: 'home',
-    component: HomePage,
+    component: VeBalPage,
     beforeEnter: (to, from, next) => {
       /*
         - Correct urls:
@@ -190,6 +231,7 @@ const routes: RouteRecordRaw[] = [
       }
       return next();
     },
+   
   },
   {
     path: '/:pathMatch(.*)*',

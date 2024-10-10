@@ -32,15 +32,15 @@ const { t } = useI18n();
 const conversationTableRows = computed(() => [
   {
     label: t('getVeBAL.lockForm.lockPeriods.1y'),
-    value: `~1 ${veBalTokenInfo.value?.symbol}`,
+    value: `~1 veTIDE`,
   },
   {
     label: t('getVeBAL.lockForm.lockPeriods.6m'),
-    value: `~0.5 ${veBalTokenInfo.value?.symbol}`,
+    value: `~0.5 veTIDE`,
   },
   {
     label: t('getVeBAL.lockForm.lockPeriods.3m'),
-    value: `~0.25 ${veBalTokenInfo.value?.symbol}`,
+    value: `~0.25 veTIDE`,
   },
 ]);
 </script>

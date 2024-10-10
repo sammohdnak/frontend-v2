@@ -25,9 +25,9 @@ const benefits = computed(() => [
  */
 function navigateToGetVeBAL() {
   router.push({
-    name: 'get-vebal',
+    name: 'get-veTide',
     query: {
-      returnRoute: 'vebal',
+      returnRoute: 'veTide',
     },
   });
 }

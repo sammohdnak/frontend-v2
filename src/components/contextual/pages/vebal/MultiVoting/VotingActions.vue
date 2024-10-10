@@ -23,12 +23,12 @@ const { handleFailed, handleSuccess, txState, votingActions } =
     />
     <div v-else>
       <ConfirmationIndicator :txReceipt="txState.receipt" />
-
+ <!-- //TODO change to pulsechain Later -->
       <BalBtn
         tag="router-link"
         :to="{
-          name: 'vebal',
-          params: { networkSlug: 'ethereum' },
+          name: 'veTide',
+          params: { networkSlug: 'sepolia' },
         }"
         color="gray"
         outline

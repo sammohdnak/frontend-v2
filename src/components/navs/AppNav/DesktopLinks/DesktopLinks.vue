@@ -24,7 +24,7 @@ function isActive(page: string): boolean {
   <div class="desktop-links">
     <DesktopLinkItem
       :to="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`"
-      :active="isActive('home')"
+      :active="isActive('home2')"
       prefetch
       @click="trackGoal(Goals.ClickNavPools)"
     >
@@ -66,12 +66,12 @@ function isActive(page: string): boolean {
       {{ $t('portfolio') }}
     </DesktopLinkItem>
     <DesktopLinkItem
-      :to="{ name: 'vebal', params: { networkSlug } }"
-      :active="isActive('vebal')"
+      :to="{ name: 'veTide', params: { networkSlug } }"
+      :active="isActive('veTide')"
       prefetch
       @click="trackGoal(Goals.ClickNavVebal)"
     >
-      veBAL
+      veTIDE
     </DesktopLinkItem>
   </div>
 </template>

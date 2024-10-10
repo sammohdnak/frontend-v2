@@ -19,8 +19,8 @@
       {
         "chainId": 11155111,
         "address": "0x96ebffff4d85c381376bfade6cd2607ab4d36982",
-        "name": "Balancer 80 BAL 20 WETH",
-        "symbol": "B-80BAL-20WETH",
+        "name": "Tide 80 TIDE 20 WETH",
+        "symbol": "B-80TIDE-20WETH",
         "decimals": 18,
         "extensions": {
           "coingeckoId": "balancer"
@@ -29,8 +29,8 @@
       {
         "chainId": 11155111,
         "address": "0xb19382073c7A0aDdbb56Ac6AF1808Fa49e377B75",
-        "name": "Balancer Governance Token",
-        "symbol": "BAL",
+        "name": "TIDE Governance Token",
+        "symbol": "TIDE",
         "decimals": 18,
         "extensions": {
           "coingeckoId": "balancer"
@@ -110,8 +110,8 @@
       {
         "chainId": 11155111,
         "address": "0x137A72F2Bb85Bfeb921e7CFa907847a562d2d152",
-        "name": "Bal",
-        "symbol": "Bal",
+        "name": "Tide",
+        "symbol": "Tide",
         "decimals": 18,
         "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
         "extensions": {

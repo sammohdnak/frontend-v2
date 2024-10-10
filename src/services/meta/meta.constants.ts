@@ -25,9 +25,9 @@ export const ROUTE_META_DATA = {
   //     'Track your Balancer Portfolio, including your unstaked and stake LP positions',
   // },
   vebal: {
-    metaTitle: 'veBAL tokenomics',
+    metaTitle: 'veTIDE tokenomics',
     metaDescription:
-      'Get veBAL (voter escrowed B-80BAL-20WETH) for extra liquidity mining incentives, governance voting power and a share of protocol revenue',
+      'Get veTIDE (voter escrowed B-80TIDE-20WETH) for extra liquidity mining incentives, governance voting power and a share of protocol revenue',
   },
   // 'terms-of-use': {
   //   metaTitle: 'Balancer Terms of Use',

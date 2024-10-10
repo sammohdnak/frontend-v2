@@ -188,7 +188,7 @@ function copyAddress() {
       </div>
       <AppSlippageForm class="mt-1" />
     </div>
-    <div v-if="isEIP1559SupportedNetwork" class="px-4 mt-6">
+    <!-- <div v-if="isEIP1559SupportedNetwork" class="px-4 mt-6">
       <div class="flex items-baseline">
         <span class="mb-2 font-medium" v-text="$t('transactionType')" />
         <BalTooltip>
@@ -203,8 +203,8 @@ function copyAddress() {
         :options="ethereumTxTypeOptions"
         @update:model-value="setEthereumTxType"
       />
-    </div>
-    <div class="px-4 mt-6">
+    </div> -->
+    <!-- <div class="px-4 mt-6">
       <div class="flex items-baseline">
         <span class="mb-2 font-medium" v-text="$t('useSignatures')" />
         <BalTooltip>
@@ -219,7 +219,7 @@ function copyAddress() {
         name="supportSignatures"
         @toggle="setSupportSignatures"
       />
-    </div>
+    </div> -->
     <div
       class="p-4 mt-4 text-sm rounded-b-xl border-t dark:border-gray-900 network"
     >
