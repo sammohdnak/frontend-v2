@@ -40,6 +40,7 @@ import {
   hasUserVotes,
   isGaugeNew,
 } from '@/components/contextual/pages/vebal/voting-utils';
+import { configService } from '@/services/config/config.service';
 
 /**
  * TYPES
@@ -145,16 +146,18 @@ function isInternalUrl(url: string): boolean {
 }
 
 function redirectToPool(pool: VotingPool, inNewTab) {
-  const redirectUrl = poolURLFor(pool, pool.network);
-  if (!isInternalUrl(redirectUrl)) {
-    window.location.href = redirectUrl;
-  } else {
-    const route = router.resolve({
-      name: 'pool',
-      params: { id: pool.id, networkSlug: getNetworkSlug(pool.network) },
-    });
-    inNewTab ? window.open(route.href) : router.push(route);
-  }
+  // alert('here')
+  window.location.href = `${configService.env.VITE_APP_MAIN_FE_URL}/pools/${getNetworkSlug(pool.network)}/v3/${pool.id}`
+  // const redirectUrl = poolURLFor(pool, pool.network);
+  // if (!isInternalUrl(redirectUrl)) {
+  //   window.location.href = redirectUrl;
+  // } else {
+  //   const route = router.resolve({
+  //     name: 'pool',
+  //     params: { id: pool.id, networkSlug: getNetworkSlug(pool.network) },
+  //   });
+  //   inNewTab ? window.open(route.href) : router.push(route);
+  // }
 }
 
 function getPoolExternalUrl(pool: VotingPool) {
@@ -295,6 +298,7 @@ function voteDisabledFor(pool: VotingPool): boolean {
             class="ml-2 text-gray-500 hover:text-blue-500 transition-colors"
             @click="redirectToPool(pool, true)"
           />
+         
         </div>
       </template>
       <template #nextPeriodVotesCell="pool: VotingPool">

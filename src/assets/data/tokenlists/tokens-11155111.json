@@ -118,6 +118,26 @@
           "coingeckoId": "usd-coin"
         }
       },
+      {
+        "chainId": 11155111,
+        "address": "0x7EFAF45e0356aF4e021437e4e42036095c89a8c3",
+        "name": "PLS",
+        "symbol": "mPLS",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "pulsechain"
+        }
+      },
+      {
+        "chainId": 11155111,
+        "address": "0xdE707167B0098eD2D5cBa01ACB32b9E8D1496C26",
+        "name": "INC",
+        "symbol": "mINC",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "pulsex-incentive-token"
+        }
+      },
 
       {
         "chainId": 11155111,
