@@ -29,7 +29,7 @@ const isLoading = computed(
 </script>
 
 <template>
-  <h3 class="mb-4 font-bold text-center">
+  <h3 class="mb-4 font-bold text-center lg:text-left">
     {{ $t('veBAL.myVeBAL.title') }}
   </h3>
   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4">

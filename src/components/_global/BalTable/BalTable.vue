@@ -96,6 +96,23 @@ const getHorizontalStickyClass = (index: number) => {
   return '';
 };
 
+const getHeaderClass = computed(() => (column: ColumnDefinition, columnIndex: number) => [
+  'p-6 bg-none dark:bg-none headingShadow border-b border-gray-200 dark:border-gray-700', // Modified background colors
+  column.className,
+  getHorizontalStickyClass(columnIndex),
+  isColumnStuck.value ? 'isSticky' : '',
+  column.sortKey && !(props.isOnlyDescSort && currentSortColumn.value === column.id)
+    ? 'cursor-pointer'
+    : '',
+  column.sortKey && currentSortColumn.value !== column.id
+    ? 'text-gray-800 hover:text-purple-600 focus:text-blue-500 dark:text-gray-100 dark:hover:text-yellow-500 dark:focus:text-yellow-500 transition-colors'
+    : '',
+  currentSortColumn.value === column.id && currentSortDirection.value
+    ? 'text-blue-600 hover:text-blue-500 focus:text-purple-600 dark:text-blue-400 dark:hover:text-blue-600 dark:focus:text-blue-600 transition-colors'
+    : '',
+  !props.square ? 'rounded-t-lg' : '',
+]);
+
 const handleSort = (columnId: string | null, updateDirection = true) => {
   const column = props.columns.find(column => column.id === columnId);
   if (!column?.sortKey) return;
@@ -234,30 +251,14 @@ watch([() => props.data, () => props.isLoading], ([newData]) => {
           />
         </colgroup>
         <!-- header is rendered as a row - seperated by columns -->
-        <thead class="z-10 bg-white dark:bg-gray-900">
+        <thead class="z-10 bg-none ">
           <th
-            v-for="(column, columnIndex) in filteredColumns"
-            :key="`header-${column.id}`"
-            :ref="columnIndex == 0 ? 'stickyHeaderRef' : undefined"
-            :class="[
-              'p-6 bg-white dark:bg-gray-850 headingShadow border-b dark:border-gray-900',
-              column.className,
-              getHorizontalStickyClass(columnIndex),
-              isColumnStuck ? 'isSticky' : '',
-              column.sortKey &&
-              !(props.isOnlyDescSort && currentSortColumn === column.id)
-                ? 'cursor-pointer'
-                : '',
-              column.sortKey && currentSortColumn !== column.id
-                ? 'text-gray-800 hover:text-purple-600 focus:text-blue-500 dark:text-gray-100 dark:hover:text-yellow-500 dark:focus:text-yellow-500 transition-colors'
-                : '',
-              currentSortColumn === column.id && currentSortDirection
-                ? 'text-blue-600 hover:text-blue-500 focus:text-purple-600 dark:text-blue-400 dark:hover:text-blue-600 dark:focus:text-blue-600 transition-colors'
-                : '',
-              !square ? 'rounded-t-lg' : '',
-            ]"
-            @click="handleSort(column.id)"
-          >
+      v-for="(column, columnIndex) in filteredColumns"
+      :key="`header-${column.id}`"
+      :ref="columnIndex == 0 ? 'stickyHeaderRef' : undefined"
+      :class="getHeaderClass(column, columnIndex)"
+      @click="handleSort(column.id)"
+    >
             <div :class="['flex', getAlignProperty(column.align)]">
               <slot
                 v-if="column.Header"
@@ -301,7 +302,7 @@ watch([() => props.data, () => props.isLoading], ([newData]) => {
       />
       <div
         v-else-if="!isLoading && !tableData.length"
-        class="flex justify-start items-center p-6 max-w-full h-24 bg-white dark:bg-gray-850 row-bg text-secondary"
+        class="flex justify-start items-center p-6 max-w-full h-24 bg-none row-bg text-secondary"
       >
         {{ noResultsLabel || $t('noResults') }}
       </div>
@@ -322,7 +323,7 @@ watch([() => props.data, () => props.isLoading], ([newData]) => {
               column.align === 'right' ? 'text-left' : 'text-right',
               getHorizontalStickyClass(columnIndex),
               isColumnStuck ? 'isSticky' : '',
-              'bg-white dark:bg-gray-850 p-0 m-0 h-0',
+              'bg-none p-0 m-0 h-0',
             ]"
           />
         </tr>
@@ -375,6 +376,7 @@ watch([() => props.data, () => props.isLoading], ([newData]) => {
             </template>
           </BalTableRow>
         </template>
+        
 
         <!-- end end data rows -->
         <TotalsRow
@@ -434,7 +436,7 @@ watch([() => props.data, () => props.isLoading], ([newData]) => {
 }
 
 .row-bg {
-  @apply bg-white dark:bg-gray-850 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ease-in duration-300;
+  @apply bg-none dark:bg-transparent hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ease-in duration-300;
 }
 
 .bal-table-pagination-btn {

@@ -146,7 +146,7 @@ watch(account, (_, prevAccount) => {
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col mt-4">
     <div
       class="flex flex-col lg:flex-row gap-4 lg:justify-between lg:items-end"
     >
@@ -201,7 +201,7 @@ watch(account, (_, prevAccount) => {
 
     <div class="flex flex-wrap justify-between items-end px-4 lg:px-0">
       <div class="flex gap-2 xs:gap-3 mb-3 lg:mb-0">
-        <BalCard shadow="none" class="p-0 md:w-48 min-w-max">
+        <BalCard shadow="none" class="p-0 md:w-48 min-w-max bg-tide-card">
           <div class="flex items-center">
             <p class="inline mr-1 text-sm text-secondary">
               My unallocated votes
@@ -233,7 +233,7 @@ watch(account, (_, prevAccount) => {
             class="relative top-0.5"
           />
         </BalCard>
-        <BalCard shadow="none" class="md:w-48 min-w-max">
+        <BalCard shadow="none" class="md:w-48 min-w-max bg-tide-card">
           <div class="flex items-center">
             <p
               :class="{ 'text-orange-500 font-medium': votingPeriodLastHour }"

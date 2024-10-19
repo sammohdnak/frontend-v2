@@ -13,6 +13,7 @@ import useNetwork from '@/composables/useNetwork';
 import AppLogo from '../images/AppLogo.vue';
 import { useThirdPartyServices } from '@/composables/useThirdPartyServices';
 import { useAppzi } from '@/composables/useAppzi';
+import { configService } from '@/services/config/config.service';
 
 const { networkSlug } = useNetwork();
 const { handleThirdPartyModalToggle } = useThirdPartyServices();
@@ -64,8 +65,9 @@ const linkSections= [
 
 <template>
   <footer v-once>
+    <div class="bg-footer-light dark:bg-footer-dark bg-no-repeat bg-cover">
     <div
-      class="xl:container lg:px-4 xl:mx-auto dark:border-t dark:border-gray-800"
+      class="xl:container lg:px-4 xl:mx-auto dark:border-t dark:border-gray-800 "
     >
       <div
         class="flex flex-col md:flex-row gap-8 md:justify-between py-12 px-4 lg:px-0 text-primary"
@@ -73,225 +75,121 @@ const linkSections= [
         <div class="flex flex-col gap-8">
           <div class="flex flex-col gap-2">
 
+            <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+      
+   
+         <AppLogo class="mb-4" />
+        </a>
+
          
-          <router-link
-            class="font-medium link"
-            :to="{ name: 'home', params: { networkSlug } }"
-          >
-            <AppLogo class="mb-4" />
-          </router-link>
-          <p> Tide is a battle-tested toolkit for true AMM experimentation and innovation.</p>
+          <p class="w-full lg:w-2/3"> Tide is a battle-tested toolkit for true AMM experimentation and innovation.</p>
         </div>
-          <!-- <div class="flex md:hidden flex-col gap-2">
-            <p>
-              <router-link
-                class="text-lg font-medium link"
-                :to="{ name: 'home', params: { networkSlug } }"
-              >
-                {{ $t('pool') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link
-                class="text-lg font-medium link"
-                :to="{ name: 'swap', params: { networkSlug } }"
-              >
-                {{ $t('swap') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link
-                class="text-lg font-medium link"
-                :to="{ name: 'claim', params: { networkSlug } }"
-              >
-                {{ $t('claim') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link
-                class="text-lg font-medium link"
-                :to="{ name: 'portfolio', params: { networkSlug } }"
-              >
-                {{ $t('portfolio') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link
-                class="text-lg font-medium link"
-                :to="{ name: 'vebal', params: { networkSlug } }"
-              >
-                {{ $t('vebal') }}
-              </router-link>
-            </p>
-          </div> -->
-
-          <div class="flex flex-wrap md:order-3 gap-3 md:gap-4">
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Home"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('about') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Docs"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('docs') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Forum"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('forum') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Vote"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('vote') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Grants"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('grants') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.BugBounty"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('bugBounty') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-
-            <BalLink
-              :href="EXTERNAL_LINKS.Balancer.Analytics"
-              external
-              noStyle
-              class="group link link--external"
-            >
-              {{ $t('analytics') }}
-              <BalIcon name="arrow-up-right" size="sm" class="arrow" />
-            </BalLink>
-          </div>
+      
         </div>
-        <div class="flex flex-col gap-8">
-          <div class="md:order-2">
-            <div class="flex lg:flex-col md:justify-end">
-              <div class="flex gap-3 md:justify-end">
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Twitter"
-                  external
-                  noStyle
-                >
-                  <IconTwitter />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Discord"
-                  external
-                  noStyle
-                >
-                  <IconDiscord />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Medium"
-                  external
-                  noStyle
-                >
-                  <IconMedium />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Youtube"
-                  external
-                  noStyle
-                >
-                  <IconYoutube />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Github"
-                  external
-                  noStyle
-                >
-                  <IconGithub />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Linkedin"
-                  external
-                  noStyle
-                >
-                  <IconLinkedin />
-                </BalLink>
-                <BalLink
-                  :href="EXTERNAL_LINKS.Balancer.Social.Mail"
-                  external
-                  noStyle
-                >
-                  <IconMail />
-                </BalLink>
-              </div>
-            </div>
+
+        <div class="flex gap-8">
+          <div class="flex flex-col gap-4">
+            <p class="font-medium">Product</p>
+            <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Overview
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Features
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Solutions
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Tutorials
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Pricing
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Releases
+        </a>
+       
           </div>
 
-          <div
-            class="flex flex-wrap md:order-3 gap-x-3 lg:gap-x-4 gap-y-2 md:justify-end"
-          >
-            <p>
-              <button class="policy" @click="openNpsModal">Feedback</button>
-            </p>
-            <p>
-              <router-link class="policy" :to="{ name: 'terms-of-use' }">
-                {{ $t('policies.termsOfUse') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link class="policy" :to="{ name: 'privacy-policy' }">
-                {{ $t('policies.privacyPolicy') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link class="policy" :to="{ name: 'cookies-policy' }">
-                {{ $t('policies.cookiesPolicy') }}
-              </router-link>
-            </p>
-            <p>
-              <router-link class="policy" :to="{ name: 'risks' }">
-                {{ $t('policies.risks') }}
-              </router-link>
-            </p>
-            <p>
-              <span
-                class="cursor-pointer policy"
-                @click="handleThirdPartyModalToggle(true)"
-              >
-                {{ $t('policies.thirdPartyServices') }}
-              </span>
-            </p>
+          <div class="flex flex-col gap-4">
+            <p class="font-medium">Resources</p>
+            <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Blog
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Newsletter
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Events
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Help Center
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Tutorials
+        </a>
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self"
+          class="font-medium link"
+         >
+        Support
+        </a>
+       
+          </div>
+        </div>
+      
+        <div class="flex flex-col gap-4">
+          <p>Stay upto date</p>
+          <div class="flex items-center gap-4">
+            <input
+            placeholder="Enter your email"
+            class="bg-white text-slate-500 text-lg rounded-md px-3.5 py-2.5" type="text">
+            <BalBtn
+             color="tide"
+             
+            >
+              Subscribe
+            </BalBtn>
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   </footer>
 </template>
 

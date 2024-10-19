@@ -267,7 +267,7 @@ function navigateToGetVeBAL() {
 </script>
 
 <template>
-  <div class="hero-container">
+  <div class="hero-container xl:container  lg:mx-auto">
     <div class="hero-content">
       <div
         v-if="showVebalInfo"
@@ -294,7 +294,7 @@ function navigateToGetVeBAL() {
 
             <BalBtn
               color="transparent"
-              class="mr-3 btn-extend"
+              class="mr-3 btn-gold"
               @click="navigateToGetVeBAL"
             >
               Extend lock
@@ -379,7 +379,7 @@ function navigateToGetVeBAL() {
 .hero-container {
   @apply flex content-center relative w-full;
 
-  min-height: 440px;
+  /* min-height: 440px; */
   z-index: 0;
   background-color: white;
 }
@@ -415,6 +415,6 @@ function navigateToGetVeBAL() {
 
 .hero-content {
   @apply flex flex-col md:flex-row md:items-center max-w-screen-2xl mx-auto md:gap-4 lg:gap-8 py-4 md:py-8
-    xl:pl-4 w-full z-10;
+    xl:w-full z-10;
 }
 </style>

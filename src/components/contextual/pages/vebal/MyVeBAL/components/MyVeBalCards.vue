@@ -94,25 +94,25 @@ const cards = computed(() => {
 </script>
 
 <template>
-  <BalCard v-for="card in cards" :key="card.id">
+  <BalCard v-for="card in cards" :key="card.id" class="shadow-none">
     <div class="flex justify-between items-center">
       <div class="font-bold label">
         {{ card.label }}
       </div>
-      <div
+      <!-- <div
         :class="[
           card.iconBgColor,
           'flex items-center p-3 rounded-full justifty center bg-red',
         ]"
-      >
+      > -->
         <img :src="card.icon" alt="card.label" />
-      </div>
+      <!-- </div> -->
     </div>
     <div class="value" :class="card.id">
       <div v-if="card.id === 'lockedVeBAL'">
         <span
           :class="{ 'text-red-500': bnum(totalExpiredLpTokens).gt(0) }"
-          class="mr-1 font-semibold truncate"
+          class="mr-1 font-medium truncate text-3xl text-tide"
           >{{ card.value }}</span
         >
         <BalTooltip
@@ -126,7 +126,7 @@ const cards = computed(() => {
         />
       </div>
       <div v-else>
-        <span class="text-xl font-bold truncate">{{ card.value }}</span>
+        <span class="text-3xl font-medium truncate text-tide">{{ card.value }}</span>
       </div>
     </div>
     <div class="mb-3 secondary-value text-secondary">
@@ -138,9 +138,9 @@ const cards = computed(() => {
         <BalBtn
           tag="a"
           :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools/${networkSlug}/v3/${lockablePoolId}/add-liquidity`"
-          color="white"
-          class="mr-4 text-black dark:text-white hero-btn"
-          outline
+          color="tide"
+          class="mr-4 text-white dark:text-white hero-btn"
+        
         >
           {{ $t('addLiquidity') }}
         </BalBtn>
@@ -159,8 +159,8 @@ const cards = computed(() => {
           {{ $t('addLiquidity') }}
         </BalBtn> -->
         <BalBtn
-          color="blue"
-          outline
+          color="tide"
+        
           :disabled="Number(bptBalance) === 0"
           @click="
             $router.push({ name: 'get-veTide', query: { returnRoute: 'veTide' } })
@@ -174,21 +174,19 @@ const cards = computed(() => {
         <BalBtn
           v-if="bnum(totalExpiredLpTokens).gt(0)"
           :disabled="!isWalletReady"
-          color="blue"
-          outline
+          color="tide"
+          
           @click="showUnlockPreviewModal = true"
         >
           Unlock
         </BalBtn>
         <BalBtn
-          v-else
-          :disabled="!isWalletReady"
-          color="blue"
-          outline
-          class="mr-3"
-          @click="
-            $router.push({ name: 'get-veTide', query: { returnRoute: 'veTide' } })
-          "
+         
+         
+          color="tide"
+          
+          class="mr-3 btn-gold"
+         
         >
           Extend lock
         </BalBtn>

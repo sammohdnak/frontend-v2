@@ -24,10 +24,10 @@ provideVoting();
     <MyVebalInfo v-if="isVeBalSupported" v-once />
 
     <div
-      class="xl:container py-16 xl:py-20 lg:mx-auto bg-white dark:bg-[#0C111D]"
+      class="xl:container py-4 xl:py-4 lg:mx-auto bg-white dark:bg-gray-900"
     >
-      <div v-if="isVeBalSupported" class="lg:mx-auto max-w-5xl">
-        <div class="px-4 mb-8">
+      <div v-if="isVeBalSupported" class="">
+        <div class=" ">
           <MyVeBAL />
         </div>
         <!-- <div>
@@ -37,9 +37,9 @@ provideVoting();
     </div>
     <div
       v-if="isVeBalSupported"
-      class="xl:container lg:px-4 xl:px-0 pt-16 xl:pt-20 xl:mx-auto"
+      class="xl:container lg:px-4 xl:px-0 pt-4 xl:pt-4 xl:mx-auto"
     >
-      <div class="xl:px-0 mb-16">
+      <div class="xl:px-0 mb-8">
         <LMVoting />
       </div>
     </div>

@@ -11,6 +11,7 @@ import useNetwork from '@/composables/useNetwork';
 import AppNavActions from './AppNavActions.vue';
 import AppNavAlert from './AppNavAlert.vue';
 import DesktopLinks from './DesktopLinks/DesktopLinks.vue';
+import { configService } from '@/services/config/config.service';
 
 /**
  * STATE
@@ -52,16 +53,16 @@ onUnmounted(() => {
 
 <template>
   <!-- <AppNavAlert v-if="currentAlert" :alert="currentAlert" /> -->
-  <nav id="app-nav" ref="appNav" class="sticky top-0 lg:px-6 pr-1 pl-4 h-20">
+  <nav id="app-nav" ref="appNav" class="sticky top-0 lg:px-6 pr-1 pl-4 h-20 border-b !border-b-[rgba(0,0,0,0.1)] dark:!border-b-[rgba(255,255,255,0.1)]">
     <div class="flex justify-between items-center h-full">
       <div class="flex items-center h-full">
-        <router-link
-          :to="{ name: 'home', params: { networkSlug } }"
-          @click="trackGoal(Goals.ClickNavLogo)"
-        >
+        <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
+         target="_self">
+      
+   
           <AppIcon v-if="['xs', 'sm'].includes(bp)" />
           <AppLogo v-else />
-        </router-link>
+        </a>
 
         <DesktopLinks v-if="isDesktop" class="ml-8 font-medium" />
       </div>

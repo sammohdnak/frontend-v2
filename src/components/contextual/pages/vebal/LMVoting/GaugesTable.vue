@@ -203,14 +203,26 @@ function voteDisabledFor(pool: VotingPool): boolean {
 }
 </script>
 
-<template>
+<template
+ 
+>
   <BalCard
     shadow="lg"
-    class="mt-4"
+    class="mt-4 bg-tide-card dark:bg-tide-card-dark relative"
     :square="upToLargeBreakpoint"
     :noBorder="upToLargeBreakpoint"
     noPad
   >
+  <img
+              
+  class="absolute top-1/3 bottom-0 right-0 left-1/2 object-contain flex dark:hidden h-full w-auto min-h-96 mr-10 ml-auto"
+  src="@/assets/images/bg/pool-list-bg-light.png"
+            />
+            <img
+              
+              class="absolute top-1/3 bottom-0 right-0 left-1/2 object-contain hidden dark:flex h-full w-auto min-h-96 mr-10 ml-auto"
+              src="@/assets/images/bg/pool-list-bg-dark.png"
+            />
     <BalTable
       :columns="columns"
       :data="data"
@@ -235,7 +247,7 @@ function voteDisabledFor(pool: VotingPool): boolean {
       }"
       :renderedRowsIdx="renderedRowsIdx"
     >
-      <template #chainColumnHeader>
+      <template #chainColumnHeader >
         <div class="flex items-center">
           <NetworkIcon />
         </div>
@@ -336,7 +348,7 @@ function voteDisabledFor(pool: VotingPool): boolean {
         </BalLazy>
       </template>
       <template #myVotesCell="pool: VotingPool">
-        <div v-if="!isLoading" class="py-4 px-6 text-right">
+        <div v-if="!isLoading" class="py-4 px-6 text-right " >
           <GaugesTableMyVotes :pool="pool"></GaugesTableMyVotes>
         </div>
       </template>

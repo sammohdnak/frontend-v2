@@ -65,7 +65,16 @@ module.exports = {
       borderRadius: {
         '2xl': '1.25rem',
       },
+      backgroundImage: {
+        'footer-light': "url('@/assets/images/bg/footer-bg-light.png')",
+        'footer-dark':'url("@/assets/images/bg/footer-bg-dark.png")',
+        'tide-card':
+          'linear-gradient(112.03deg, rgba(209, 224, 255, 0.1) 4.09%, rgba(0, 78, 235, 0.1) 83.4%)',
+          'tide-card-dark':
+          'linear-gradient(112.03deg, rgba(209, 224, 255, 0.1) 4.09%, rgba(0, 78, 235, 0.1) 83.4%)',
+      },
       colors: {
+        tide:'#155EEF',
         gray: {
           50: '#F8FAFC',
           100: '#EAF0F6',

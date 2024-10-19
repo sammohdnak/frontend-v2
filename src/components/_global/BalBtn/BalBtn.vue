@@ -41,7 +41,7 @@ type Props = {
     | 'blue'
     | 'yellow'
     | 'black'
-    | 'transparent';
+    | 'transparent'|'tide';
   label?: string;
   block?: boolean;
   circle?: boolean;
@@ -136,6 +136,9 @@ const bgColorClasses = computed(() => {
   if (props.color.includes('gradient')) return bgGradientClasses.value;
   else if (props.outline) return 'bg-transparent';
   else if (props.flat) return bgFlatClasses.value;
+  else if (props.color === 'tide') {
+    return 'bg-tide';
+  }
   else if (props.color === 'white') {
     return 'bg-transparent';
   } else {
@@ -174,6 +177,10 @@ const textColorClasses = computed(() => {
   if (props.outline && props.disabled)
     return 'text-gray-400 dark:text-gray-700';
   if (props.outline && props.color === 'gradient') return 'text-blue-700';
+
+  if (props.color === 'tide') {
+    return 'text-white';
+  }
   if (props.color === 'white') {
     if (props.outline)
       return 'text-white hover:text-blue-500 dark:hover:text-blue-500';
