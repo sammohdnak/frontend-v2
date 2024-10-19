@@ -161,8 +161,8 @@ function redirectToPool(pool: VotingPool, inNewTab) {
 }
 
 function getPoolExternalUrl(pool: VotingPool) {
-  const poolUrl = poolURLFor(pool, pool.network);
-  return isInternalUrl(poolUrl) ? null : poolUrl;
+  // const poolUrl = poolURLFor(pool, pool.network);
+  return `${configService.env.VITE_APP_MAIN_FE_URL}/pools/${getNetworkSlug(pool.network)}/v3/${pool.id}`
 }
 
 function getHasUserVotes(userVotes: string): boolean {
