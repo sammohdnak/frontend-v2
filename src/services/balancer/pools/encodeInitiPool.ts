@@ -4,6 +4,10 @@ import { Interface } from "@ethersproject/abi"
 export const encodeInitiPool =  (poolId:Address,tokenAddresses:String[],amountsIn:string[]) => {
     // const routerInterface = new Interface("function initialize(address pool,IERC20[] memory tokens,uint256[] memory exactAmountsIn, uint256 minBptAmountOut,bool wethIsEth,bytes memory userData) external payable returns (uint256 bptAmountOut)",
     // )
+    console.log('poolId,tokenAddresses, amountsIn',
+        poolId,
+        tokenAddresses,
+        amountsIn,)
 
     const routerInterface = new Interface([
         "function initialize(address pool, address[] memory tokens, uint256[] memory exactAmountsIn, uint256 minBptAmountOut, bool wethIsEth, bytes memory userData) external payable returns (uint256 bptAmountOut)"

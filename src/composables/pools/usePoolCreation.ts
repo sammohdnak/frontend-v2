@@ -214,11 +214,12 @@ export default function usePoolCreation() {
         return '';
     }
   });
+  const poolCreationType = computed((): string => poolCreationState.type);
 
   const isWeightedPool = computed(()=>poolCreationType.value == PoolType.Weighted)
 
 
-  const poolCreationType = computed((): string => poolCreationState.type);
+
 
   const tokensWithNoPrice = computed(() => {
     const validTokens = tokensList.value.filter(t => t !== '');
@@ -442,7 +443,9 @@ export default function usePoolCreation() {
     }
     const provider = getProvider();
     let tx: TransactionResponse
-    if (isWeightedPool) {
+   
+    if (poolTypeString.value=='weighted') {
+      console.log('Im Reaching Weighting Secion')
       tx = await balancerService.pools.weighted.create(
         provider,
         poolCreationState.name,
@@ -452,6 +455,7 @@ export default function usePoolCreation() {
         poolOwner.value
       );
     } else {
+      console.log('Im Reaching Stable Secion')
       tx = await balancerService.pools.stable.create(
         provider,
         poolCreationState.name,
@@ -503,7 +507,7 @@ export default function usePoolCreation() {
       }
     );
     let tx: TransactionResponse
-    if (isWeightedPool) {
+    if (poolTypeString.value=='weighted') {
        tx = await balancerService.pools.weighted.initJoin(
         provider,
         poolCreationState.poolId,
@@ -577,7 +581,7 @@ export default function usePoolCreation() {
 
   async function retrievePoolAddress(hash: string) {
     let response: CreatePoolReturn | null
-    if (isWeightedPool) {
+    if (poolTypeString.value=='weighted') {
       response =
       await balancerService.pools.weighted.retrievePoolIdAndAddress(
         getProvider(),
@@ -609,7 +613,7 @@ export default function usePoolCreation() {
       tokens: any;
     } | undefined
     
-    if (isWeightedPool) {
+    if (poolTypeString.value=='weighted') {
        details = await balancerService.pools.weighted.retrievePoolDetails(
         getProvider(),
         hash

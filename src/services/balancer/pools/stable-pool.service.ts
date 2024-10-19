@@ -133,6 +133,8 @@ export default class StablePoolService {
     const stablePoolFactoryInterface =
       StablePoolFactory__factory.createInterface();
 
+    
+    console.log('receipt.logs',receipt.logs)
     const poolCreationEvent = receipt.logs
       .filter(
         log =>
@@ -153,6 +155,7 @@ export default class StablePoolService {
     // const pool = WeightedPool__factory.connect(poolAddress, provider);
     // const poolId = await pool.getPoolId();
 
+    
     const poolId = poolAddress
     return {
       id: poolId,
@@ -239,6 +242,14 @@ public async initJoin(
     console.log('signature & batch : ',signature,batch)
     
    
+  try {
+    encodeInitiPool(
+      poolId,
+     
+      tokenAddresses, initialBalancesString)
+  } catch (error) {
+    console.log(error)
+  }
       let multicallData = encodeInitiPool(
         poolId,
        
