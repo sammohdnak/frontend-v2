@@ -66,10 +66,20 @@ function isActive(page: string): boolean {
       {{ $t('portfolio') }}
     </DesktopLinkItem>
     <DesktopLinkItem
+    :to="`${configService.env.VITE_APP_MAIN_FE_URL}/claim`"
+
+      :active="isActive('claim')"
+      prefetch
+      @click="trackGoal(Goals.ClickNavPortfolio)"
+    >
+     Claim
+    </DesktopLinkItem>
+    <DesktopLinkItem
       :to="{ name: 'veTide', params: { networkSlug } }"
       :active="isActive('veTide')"
       prefetch
       @click="trackGoal(Goals.ClickNavVebal)"
+      class="text-tide font-medium"
     >
       veTIDE
     </DesktopLinkItem>
