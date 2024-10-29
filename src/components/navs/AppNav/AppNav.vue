@@ -53,8 +53,8 @@ onUnmounted(() => {
 
 <template>
   <!-- <AppNavAlert v-if="currentAlert" :alert="currentAlert" /> -->
-  <nav id="app-nav" ref="appNav" class="sticky top-0 lg:px-6 pr-1 pl-4 h-20 border-b !border-b-[rgba(0,0,0,0.1)] dark:!border-b-[rgba(255,255,255,0.1)]">
-    <div class="flex justify-between items-center h-full">
+  <nav id="app-nav" ref="appNav" class="sticky top-0 lg:px-[76px] pr-1 pl-4 h-[72px] border-b !border-b-[rgba(0,0,0,0.1)] dark:!border-b-[rgba(255,255,255,0.1)]">
+    <div class="flex justify-between items-center h-full lg:px-4">
       <div class="flex items-center h-full">
         <a :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`" 
          target="_self">
@@ -64,7 +64,7 @@ onUnmounted(() => {
           <AppLogo v-else />
         </a>
 
-        <DesktopLinks v-if="isDesktop" class="ml-8 font-medium" />
+        <DesktopLinks v-if="isDesktop" class="ml-1 font-medium" />
       </div>
 
       <AppNavActions />

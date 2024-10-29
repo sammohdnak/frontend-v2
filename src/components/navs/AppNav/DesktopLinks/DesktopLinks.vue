@@ -28,7 +28,7 @@ function isActive(page: string): boolean {
       prefetch
       @click="trackGoal(Goals.ClickNavPools)"
     >
-      {{ $t('pool') }}
+      {{ $t('pools') }}
     </DesktopLinkItem>
     <DesktopLinkItem
     :to="`${configService.env.VITE_APP_MAIN_FE_URL}/swap`"
