@@ -37,7 +37,7 @@ const closeBanner = () => {
       <div
       style="background-image: url('/images/backgrounds/vebal-bg.png');"
         v-if="showBanner"
-        class="hidden max-md:flex relative rounded-xl bg-cover    flex-col items-center justify-center py-6 px-2 my-4"
+        class="hidden max-md:flex relative rounded-xl bg-cover    flex-col items-center justify-center py-6 px-2 my-12"
       >
       <button
             @click="closeBanner"
