@@ -13,9 +13,9 @@ export function getConnectorLogo(
   connectorId: ConnectorId,
   provider: any
 ): string {
-  if (!provider) {
+  // if (!provider) {
     return defaultLogo;
-  }
+  // }
   if (connectorId === ConnectorId.InjectedMetaMask) {
     if (provider.isTally) {
       return tallyLogo;

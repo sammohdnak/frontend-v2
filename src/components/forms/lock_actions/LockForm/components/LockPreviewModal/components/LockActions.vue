@@ -287,9 +287,9 @@ onBeforeMount(async () => {
       >
         {{ $t('getVeBAL.previewModal.returnToVeBalPage') }}
       </BalBtn>
-      <transition name="pop">
+      <!-- <transition name="pop">
         <FeedbackCard class="mt-3" />
-      </transition>
+      </transition> -->
     </template>
   </div>
 </template>

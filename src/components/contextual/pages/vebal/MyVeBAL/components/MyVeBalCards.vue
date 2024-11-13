@@ -181,7 +181,12 @@ const cards = computed(() => {
           Unlock
         </BalBtn>
         <BalBtn
+        v-else
+          :disabled="!isWalletReady"
+          
          
+         
+          @click="$router.push({ name: 'get-veTide', query: { returnRoute: 'veTide' } })"
          
           color="tide"
           

@@ -25,7 +25,7 @@ const avatarSize = computed(() => {
 <template>
   <BalPopover
     noPad
-    :align="isMobile ? 'center' : undefined"
+    :align="isMobile ? 'right' : undefined"
     :detached="isMobile ? true : undefined"
   >
     <template #activator>

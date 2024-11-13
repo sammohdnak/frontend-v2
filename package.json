@@ -7,7 +7,7 @@
   },
   "scripts": {
     "vite": "vite",
-    "dev": " npm run generate:metadata && vite",
+    "dev": " npm run vite",
     "serve": "npm run dev",
     "build": "npm run generate:metadata && vite build",
     "build:witChunkSizeCheck": "node ./scripts/buildWithChunkSizeCheck.mjs",

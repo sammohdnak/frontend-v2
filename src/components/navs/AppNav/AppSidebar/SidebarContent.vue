@@ -17,6 +17,7 @@ import MediumIcon from '@/components/_global/icons/brands/MediumIcon.vue';
 import YoutubeIcon from '@/components/_global/icons/brands/YoutubeIcon.vue';
 import GithubIcon from '@/components/_global/icons/brands/GithubIcon.vue';
 import { useAppzi } from '@/composables/useAppzi';
+import { configService } from '@/services/config/config.service';
 
 /**
  * PROPS & EMITS
@@ -33,6 +34,7 @@ const { networkSlug } = useNetwork();
 const { t } = useI18n();
 const router = useRouter();
 const { openNpsModal } = useAppzi();
+const route = useRoute();
 
 /**
  * STATE
@@ -40,19 +42,19 @@ const { openNpsModal } = useAppzi();
 const blockIcon = ref<HTMLDivElement>();
 
 const navLinks = [
-  { label: t('pool'), path: '/', goal: Goals.ClickNavPools },
-  { label: t('swap'), path: `/${networkSlug}/swap`, goal: Goals.ClickNavSwap },
+  { label: t('pool'), path: `${configService.env.VITE_APP_MAIN_FE_URL}/pools`, goal: Goals.ClickNavPools },
+  { label: t('swap'), path: `${configService.env.VITE_APP_MAIN_FE_URL}/swap`, goal: Goals.ClickNavSwap },
   {
     label: t('claim'),
-    path: `/${networkSlug}/claim`,
+    path: `${configService.env.VITE_APP_MAIN_FE_URL}/claim`,
     goal: Goals.ClickNavClaim,
   },
   {
     label: t('portfolio'),
-    path: `/${networkSlug}/portfolio`,
+    path: `${configService.env.VITE_APP_MAIN_FE_URL}/portfolio`,
     goal: Goals.ClickNavPortfolio,
   },
-  { label: 'veBAL', path: `/${networkSlug}/vebal`, goal: Goals.ClickNavVebal },
+  { label: 'veTIDE', path: `/${networkSlug}/veTide`, goal: Goals.ClickNavVebal },
 ];
 
 const ecosystemLinks = [
@@ -101,7 +103,7 @@ function getSocialComponent(componentName) {
 }
 
 async function navTo(path: string, goal: string) {
-  trackGoal(goal);
+  // trackGoal(goal);
   router.push(path);
   emit('close');
 }
@@ -114,6 +116,11 @@ watch(blockNumber, async () => {
   await sleep(300);
   blockIcon.value?.classList.remove('block-change');
 });
+
+function isActive(page: string): boolean {
+  if (route.name === page) return true;
+  return false;
+}
 </script>
 
 <template>
@@ -125,17 +132,53 @@ watch(blockNumber, async () => {
     </div>
 
     <div class="grid mt-2 text-lg grid-col-1">
-      <div
+      <!-- <div
         v-for="link in navLinks"
         :key="link.label"
         class="side-bar-link"
         @click="navTo(link.path, link.goal)"
       >
         {{ link.label }}
+      </div> -->
+      <a
+      :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools`"
+       class="side-bar-link"
+       target='_blank' rel='noopener noreferrer'
+      >
+        Pools
+      </a>
+      <a
+      :href="`${configService.env.VITE_APP_MAIN_FE_URL}/swap`"
+       class="side-bar-link"
+       target='_blank' rel='noopener noreferrer'
+      >
+        Swap
+      </a>
+      <a
+      :href="`${configService.env.VITE_APP_MAIN_FE_URL}/portfolio`"
+       class="side-bar-link"
+       target='_blank' rel='noopener noreferrer'
+      >
+      Portfolio
+      </a>
+      <a
+      :href="`${configService.env.VITE_APP_MAIN_FE_URL}/claim`"
+       class="side-bar-link"
+       target='_blank' rel='noopener noreferrer'
+      >
+      Claim
+      </a>
+      <div
+       
+        
+        class="side-bar-link"
+       
+      >
+       veTIDE
       </div>
     </div>
 
-    <div class="grid mt-5 text-sm grid-col-1">
+    <div class="grid mt-5 text-sm grid-col-1 hidden">
       <span class="px-4 pb-1 font-medium text-secondary">Ecosystem</span>
       <BalLink
         v-for="link in ecosystemLinks"
@@ -161,7 +204,7 @@ watch(blockNumber, async () => {
       </div>
     </div>
 
-    <div class="grid grid-rows-1 grid-flow-col auto-cols-min gap-2 px-4 mt-4">
+    <div class="grid grid-rows-1 grid-flow-col auto-cols-min gap-2 px-4 mt-4 hidden">
       <BalLink
         v-for="(link, componentName) in socialLinks"
         :key="componentName"
@@ -181,7 +224,7 @@ watch(blockNumber, async () => {
       </BalLink>
     </div>
 
-    <div class="px-4 mt-6 text-xs">
+    <div class="px-4 mt-6 text-xs hidden">
       <div class="flex items-center">
         <div
           ref="blockIcon"

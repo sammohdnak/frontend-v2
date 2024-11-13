@@ -86,11 +86,14 @@ function handleSuccess() {
   lockConfirmed.value = true;
   refetchLockInfo();
   resetState();
+  setTimeout(() => {
+    handleClose()
+  }, 10000);
 }
 </script>
 
 <template>
-  <BalModal show :fireworks="lockConfirmed" @close="handleClose">
+  <BalModal show  @close="handleClose">
     <template #header>
       <div class="flex items-center">
         <BalCircle

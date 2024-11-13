@@ -34,7 +34,7 @@ function navigateToGetVeBAL() {
 </script>
 
 <template>
-  <div style="background-image: url('/images/backgrounds/vebal-bg.png');" class="w-full h-fit py-20 bg-cover rounded-xl gap-4 bg-no-repeat flex flex-col items-center justify-center text-white ">
+  <div style="background-image: url('/images/backgrounds/vebal-bg.png');" class="w-full h-fit py-20 px-4 md:px-8 bg-cover rounded-xl gap-4 bg-no-repeat flex flex-col items-center justify-center text-white ">
 <p class="font-bold text-3xl">Extra earnings & voting power</p>
 <p class="font-medium text-sm">Balancer Protocol liquidity incentives are directed to pools by veBAL voters.<br/> Stake in these pools to earn incentives. Boost with veBAL for up to 2.5x extra.</p>
   </div>

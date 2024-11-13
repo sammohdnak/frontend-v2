@@ -268,13 +268,13 @@ function navigateToGetVeBAL() {
 
 <template>
   <div class="hero-container xl:container  lg:mx-auto">
-    <div class="hero-content">
+    <div class="hero-content  w-full">
       <div
         v-if="showVebalInfo"
-        class="flex flex-col xl:flex-row flex-grow gap-6 justify-between xl:items-center px-10 h-full text-black dark:text-white"
+        class="flex flex-col xl:flex-row flex-grow gap-6 justify-between xl:items-center px-10 h-full text-black dark:text-white "
       >
-        <BalLoadingBlock v-if="isLoadingData"  class="w-full h-full" />
-        <div v-else class="flex flex-col flex-1">
+        <BalLoadingBlock v-if="isLoadingData"  class="w-full h-full " />
+        <div v-else class="flex flex-col flex-1 ">
           <div class="mb-2 text-xl font-bold">My veTIDE</div>
           <div class="mb-10 text-5xl font-black">
             {{ fNum(veBalBalance, FNumFormats.token) }}
