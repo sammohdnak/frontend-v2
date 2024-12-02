@@ -200,7 +200,7 @@ watch(account, (_, prevAccount) => {
     </VotingAlert>
 
     <div class="flex flex-wrap justify-between items-end px-4 lg:px-0">
-      <div class="flex gap-2 xs:gap-3 mb-3 lg:mb-0">
+      <div class="flex flex-col sm:flex-row gap-2 xs:gap-3 mb-3 lg:mb-0">
         <BalCard shadow="none" class="p-0 md:w-48 min-w-max bg-tide-card">
           <div class="flex items-center">
             <p class="inline mr-1 text-sm text-secondary">
