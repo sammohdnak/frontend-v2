@@ -8,7 +8,7 @@ const pools: Pools = {
       v2: '',
       v3: '',
     },
-    veBAL: '0x96EBFFff4D85c381376BfADe6cD2607aB4D36982',
+    veBAL: '0xaad56AC1Ac47163553AfFa292FCf1490A9d5e1a8',
   },
   Pagination: {
     PerPage: 10,

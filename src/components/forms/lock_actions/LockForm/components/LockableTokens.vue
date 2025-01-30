@@ -8,6 +8,7 @@ import { bnum } from '@/lib/utils';
 import { VeBalLockInfo } from '@/services/balancer/contracts/contracts/veBAL';
 import { Pool } from '@/services/pool/types';
 import { TokenInfo } from '@/types/TokenList';
+import { configService } from '@/services/config/config.service';
 
 /**
  * TYPES
@@ -60,12 +61,8 @@ const fiatTotal = computed((): string =>
         <div>{{ fNum(fiatTotal, FNumFormats.fiat) }}</div>
       </div>
       <BalLink
-        tag="router-link"
-        :to="{
-          name: 'add-liquidity',
-          params: { networkSlug, id: lockablePool.id },
-        }"
-        external
+        tag="a"
+        :href="`${configService.env.VITE_APP_MAIN_FE_URL}/pools/${networkSlug}/v3/${props.lockablePool.id}`"
         class="block mt-2 text-sm"
       >
         {{
