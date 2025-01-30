@@ -36,7 +36,7 @@ const fillColor = computed(() => {
 
 <template>
   <div class="flex items-center sm:mr-4 app-logo">
-    <img src="/images/logos/tide-logo.png" style="width: 32px; height: 32px;"/>
+    <img src="/images/logos/tide-logo.png" style="width: auto; height: 32px;"/>
     <!-- <svg
       id="logo"
       class="logo-svg"

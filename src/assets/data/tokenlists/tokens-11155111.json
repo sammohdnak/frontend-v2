@@ -1,174 +1,146 @@
 {
-  "https://raw.githubusercontent.com/balancer/tokenlists/main/generated/balancer.tokenlist.json": {
-    "name": "Balancer",
-    "version": { "major": 1, "minor": 0, "patch": 0 },
-    "keywords": [
-      "Balancer",
-      "DeFi",
-      "DEX",
-      "AMM",
-      "Exchange",
-      "Liquidity",
-      "Pool",
-      "Token",
-      "Swap"
-    ],
-    "logoURI": "https://raw.githubusercontent.com/balancer/pebbles/master/images/pebbles-pad.256w.png",
-    "timestamp": "2024-09-28T02:37:08.063Z",
-    "tokens": [
-      {
-        "chainId": 11155111,
-        "address": "0x96ebffff4d85c381376bfade6cd2607ab4d36982",
-        "name": "Tide 80 TIDE 20 WETH",
-        "symbol": "B-80TIDE-20WETH",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "balancer"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xb19382073c7A0aDdbb56Ac6AF1808Fa49e377B75",
-        "name": "TIDE Governance Token",
-        "symbol": "TIDE",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "balancer"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9",
-        "name": "Wrapped Ether",
-        "symbol": "WETH",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "weth"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0x68194a729C2450ad26072b3D33ADaCbcef39D574",
-        "name": "DAI",
-        "symbol": "DAI",
-        "decimals": 18
-      },
-
-      {
-        "chainId": 11155111,
-        "address": "0xf864F011C5A97fD8Da79baEd78ba77b47112935a",
-        "name": "WBTC",
-        "symbol": "WBTC",
-        "decimals": 8
-      },
-
-      {
-        "chainId": 11155111,
-        "address": "0x4d5461d3d5656525231000B7589FcA1DD4050C23",
-        "name": "MyToken",
-        "symbol": "MyTok",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/10843/large/aDAI.png?1584698791",
-        "extensions": {
-          "coingeckoId": "weth"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xb688C9E656627e7C22823D0cE788f9e3EDc0158e",
-        "name": "MyToken1",
-        "symbol": "MyTok1",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/11725/large/aUSDT.png?1593082796",
-        "extensions": {
-          "coingeckoId": "weth"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xFC6082a44C8d0129739b15ed19685b17F187A010",
-        "name": "MyToken2",
-        "symbol": "MyTok2",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/11674/large/aUSDC.png?1592546449",
-        "extensions": {
-          "coingeckoId": "weth"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xAFd6285d5CECA55c8C922EF714311531Ed147de0",
-        "name": "MyToken3",
-        "symbol": "MyTok3",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
-        "extensions": {
-          "coingeckoId": "weth"
-        }
-      },
-
-      {
-        "chainId": 11155111,
-        "address": "0x137A72F2Bb85Bfeb921e7CFa907847a562d2d152",
-        "name": "Tide",
-        "symbol": "Tide",
-        "decimals": 18,
-        "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
-        "extensions": {
-          "coingeckoId": "usd-coin"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0x7EFAF45e0356aF4e021437e4e42036095c89a8c3",
-        "name": "PLS",
-        "symbol": "mPLS",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "pulsechain"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xdE707167B0098eD2D5cBa01ACB32b9E8D1496C26",
-        "name": "INC",
-        "symbol": "mINC",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "pulsex-incentive-token"
-        }
-      },
-
-      {
-        "chainId": 11155111,
-        "address": "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
-        "name": "USDC (AAVE Faucet)",
-        "symbol": "usdc-aave",
-        "decimals": 6,
-        "extensions": {
-          "coingeckoId": "usd-coin"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0",
-        "name": "USDT (AAVE Faucet)",
-        "symbol": "usdt-aave",
-        "decimals": 6,
-        "extensions": {
-          "coingeckoId": "tether"
-        }
-      },
-      {
-        "chainId": 11155111,
-        "address": "0xFF34B3d4Aee8ddCd6F9AFFFB6Fe49bD371b8a357",
-        "name": "DAI (AAVE Faucet)",
-        "symbol": "dai-aave",
-        "decimals": 18,
-        "extensions": {
-          "coingeckoId": "dai"
-        }
+  "name": "Tide",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "keywords": [
+    "Tide",
+    "DeFi",
+    "DEX",
+    "AMM",
+    "Exchange",
+    "Liquidity",
+    "Pool",
+    "Token",
+    "Swap"
+  ],
+  "logoURI": "https://raw.githubusercontent.com/balancer/pebbles/master/images/pebbles-pad.256w.png",
+  "timestamp": "2024-09-09T15:32:22.216Z",
+  "tokens": [
+    {
+      "chainId": 11155111,
+      "address": "0xaad56AC1Ac47163553AfFa292FCf1490A9d5e1a8",
+      "logoURI": "https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide-logo.png",
+      "name": "Tide 80 TIDE 20 WETH",
+      "symbol": "B-80TIDE-20WETH",
+      "decimals": 18,
+      "extensions": {
+        "coingeckoId": "balancer"
       }
-    ]
-  }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xe0B60AEe4F5AB81c04766147Ccb5713D57dCEf05",
+      "logoURI": "https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide-logo.png",
+      "name": "TIDE Governance Token",
+      "symbol": "TIDE",
+      "decimals": 18,
+      "extensions": {
+        "coingeckoId": "balancer"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9",
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2396.png",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "extensions": {
+        "coingeckoId": "weth"
+      }
+    },
+
+    {
+      "chainId": 11155111,
+      "address": "0x4d5461d3d5656525231000B7589FcA1DD4050C23",
+      "name": "MyToken",
+      "symbol": "MyTok",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/10843/large/aDAI.png?1584698791",
+      "extensions": {
+        "coingeckoId": "weth"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xb688C9E656627e7C22823D0cE788f9e3EDc0158e",
+      "name": "MyToken1",
+      "symbol": "MyTok1",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/11725/large/aUSDT.png?1593082796",
+      "extensions": {
+        "coingeckoId": "weth"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xFC6082a44C8d0129739b15ed19685b17F187A010",
+      "name": "MyToken2",
+      "symbol": "MyTok2",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/11674/large/aUSDC.png?1592546449",
+      "extensions": {
+        "coingeckoId": "weth"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xAFd6285d5CECA55c8C922EF714311531Ed147de0",
+      "name": "MyToken3",
+      "symbol": "MyTok3",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/11723/large/aSUSD.png?1593082612",
+      "extensions": {
+        "coingeckoId": "weth"
+      }
+    },
+
+    {
+      "chainId": 11155111,
+      "address": "0x2f0A6d2573c3324681CDF953a5C0504D357ffA73",
+      "name": "INC",
+      "symbol": "mINC",
+      "decimals": 18,
+      "logoURI": "https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/126bd3afa049bd6ea7ba62a680b5b84c22ba6d929f207ec54b2999b0e91c7aac.png",
+      "extensions": {
+        "coingeckoId": "pulsex-incentive-token"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0x5fc977AE8cA01386080a4148eE81E1a3AEE2537e",
+      "name": "DAI",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png",
+      "extensions": {
+        "coingeckoId": "dai-on-pulsechain"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xa2d5800A8c3663b5988C3EDB15C03f6cf50f59ca",
+      "name": "PulseX",
+      "symbol": "PulseX",
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/25417.png",
+      "extensions": {
+        "coingeckoId": "pulsex"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xB5A61306c1fB9165A582174a83eDED7357BE6490",
+      "name": "HEX",
+      "symbol": "HEX",
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28928.png",
+      "extensions": {
+        "coingeckoId": "hex-pulsechain"
+      }
+    }
+  ]
 }
