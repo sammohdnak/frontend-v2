@@ -23,6 +23,8 @@ export const NO_RECOVERY_EXIT_POOL_IDS: Record<Network, string[]> = {
   [Network.AVALANCHE]: [],
   [Network.BASE]: [],
   [Network.SEPOLIA]: [],
+  [Network.PULSECHAIN]: [],
+  [Network.PULSECHAINV4]: [],
   [Network.FANTOM]: [],
   [Network.GOERLI]: [],
   [Network.OPTIMISM]: [],
@@ -378,6 +380,12 @@ export const CSP_ISSUE_POOL_IDS: Record<Network, string[]> = {
   ],
   [Network.BASE]: [],
   [Network.SEPOLIA]: [
+    '0x027a946ac5a861b66a50cca0e8fb8766718b485100000000000000000000002c',
+  ],
+  [Network.PULSECHAIN]: [
+    '0x027a946ac5a861b66a50cca0e8fb8766718b485100000000000000000000002c',
+  ],
+  [Network.PULSECHAINV4]: [
     '0x027a946ac5a861b66a50cca0e8fb8766718b485100000000000000000000002c',
   ],
   [Network.FANTOM]: [],

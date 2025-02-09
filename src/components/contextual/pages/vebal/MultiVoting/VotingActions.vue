@@ -28,7 +28,7 @@ const { handleFailed, handleSuccess, txState, votingActions } =
         tag="router-link"
         :to="{
           name: 'veTide',
-          params: { networkSlug: 'sepolia' },
+          params: { networkSlug: 'pulsechainV4' },
         }"
         color="gray"
         outline

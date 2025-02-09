@@ -50,7 +50,7 @@ function handleInternalClose() {
           @click="
             router.push({
               name: 'veTide',
-              params: { networkSlug: getNetworkSlug(Network.SEPOLIA) },
+              params: { networkSlug: getNetworkSlug(Network.PULSECHAINV4) },
             })
           "
         />

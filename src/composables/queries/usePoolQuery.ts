@@ -72,7 +72,7 @@ export default function usePoolQuery(
     } else {
       const api = getApi();
       //TODO change to mainnet
-      const pool_res = await api.GetPool({ id: id?.toLowerCase(), chain: GqlChain.Sepolia })
+      const pool_res = await api.GetPool({ id: id?.toLowerCase(), chain: GqlChain.PulsechainV4 })
       
       let _pool = pool_res.pool
 

@@ -193,7 +193,7 @@ export class GaugeControllerDecorator {
     //   return Network.MAINNET;
     // }
     //TODO : Change this to mainnet later
-    return Network.SEPOLIA;
+    return configService.env.VITE_IS_MAINNET?Network.PULSECHAIN:Network.PULSECHAINV4;
   }
 
   private resetMulticaller() {

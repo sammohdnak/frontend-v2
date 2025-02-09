@@ -9,6 +9,10 @@ import mainnet from './mainnet';
 import optimism from './optimism';
 import polygon from './polygon';
 import sepolia from './sepolia';
+import pulsechain from './pulsechain';
+import pulsechainV4 from './pulsechainV4';
+
+
 import zkevm from './zkevm';
 import fraxtal from './fraxtal';
 import mode from './mode';
@@ -23,6 +27,8 @@ const config: Record<Network | number, Config> = {
   [Network.ZKEVM]: zkevm,
   [Network.AVALANCHE]: avalanche,
   [Network.SEPOLIA]: sepolia,
+  [Network.PULSECHAIN]: pulsechain,
+  [Network.PULSECHAINV4]: pulsechainV4,
   [Network.BASE]: base,
   [Network.FRAXTAL]: fraxtal,
   [Network.MODE]: mode,

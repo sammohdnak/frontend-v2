@@ -55,6 +55,8 @@ export enum GqlChain {
   Optimism = 'OPTIMISM',
   Polygon = 'POLYGON',
   Sepolia = 'SEPOLIA',
+  Pulsechain = 'PULSECHAIN',
+  PulsechainV4 = 'PULSECHAINV4',
   Zkevm = 'ZKEVM',
 }
 

@@ -17,10 +17,12 @@ interface Env {
   INFURA_PROJECT_ID: string;
   ENABLE_STABLE_POOLS: boolean;
   WALLET_SCREENING: boolean;
+  VITE_IS_MAINNET: boolean;
 }
 export default class ConfigService {
   public get env(): Env {
     return {
+      VITE_IS_MAINNET:import.meta.env.VITE_IS_MAINNET=='true'?true:false,
       APP_ENV: import.meta.env.VITE_ENV || 'development',
       APP_DOMAIN: import.meta.env.VITE_DOMAIN || 'app.balancer.fi',
       APP_HOST: import.meta.env.VITE_HOST || 'balancer.fi',

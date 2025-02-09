@@ -8,7 +8,7 @@ import { ApiVotingPool } from '@/services/balancer/gauges/gauge-controller.decor
  Fake voting Pool data to test voting list UI in testnet networks
 */
 export function testnetVotingPools(
-  testnet: 'SEPOLIA' | 'GOERLI'
+  testnet: 'SEPOLIA' | 'GOERLI' |'PULSECHAINV4'
 ): ApiVotingPool[] {
   const veBal: ApiVotingPool = {
     chain: testnet as GqlChain,

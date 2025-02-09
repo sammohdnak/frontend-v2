@@ -19,6 +19,9 @@ test('Maps API Chains', async () => {
 
   expect(mapApiChain('GOERLI')).toBe(Network.GOERLI);
   expect(mapApiChain('SEPOLIA')).toBe(Network.SEPOLIA);
+  expect(mapApiChain(GqlChain.PulsechainV4)).toBe(Network.PULSECHAINV4);
+  expect(mapApiChain(GqlChain.Pulsechain)).toBe(Network.PULSECHAIN);
+
 });
 
 test('Maps API pool types', async () => {

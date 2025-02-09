@@ -28,6 +28,12 @@ export function mapApiChain(
       return Network.MODE;
     case GqlChain.Zkevm:
       return Network.ZKEVM;
+      case GqlChain.Pulsechain:
+      return Network.PULSECHAIN;
+      case GqlChain.PulsechainV4:
+        return Network.PULSECHAINV4;
+      case GqlChain.Zkevm:
+        return Network.ZKEVM;
     case 'SEPOLIA':
       return Network.SEPOLIA;
     case 'GOERLI':
