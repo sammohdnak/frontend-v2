@@ -4,8 +4,9 @@ import { configService } from '@/services/config/config.service';
 import { ref } from 'vue';
 // import { isTestMode } from '@/plugins/modes';
 
+//Note - I have hardcoded sepolia Chain Id as Balancer SDK does not have pulse & v4
 export const balancer = new BalancerSDK({
-  network: configService.network.chainId as Network,
+  network: 11155111,
   rpcUrl: configService.rpc,
   customSubgraphUrl: configService.network.subgraph,
 });

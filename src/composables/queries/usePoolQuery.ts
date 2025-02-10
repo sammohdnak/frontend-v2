@@ -97,7 +97,7 @@ export default function usePoolQuery(
     name: _pool.name,
         address: _pool.address,
     //TODO change below to mainnet
-    chainId: 11155111,
+    chainId: configService.env.VITE_IS_MAINNET?369:943,
     poolType: 'Weighted' as PoolType,
     poolTypeVersion: _pool.protocolVersion,
     swapFee: _pool.dynamicData.swapFee,

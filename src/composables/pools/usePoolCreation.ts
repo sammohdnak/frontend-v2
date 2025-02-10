@@ -493,58 +493,67 @@ export default function usePoolCreation() {
   }
 
   async function joinPool() {
-    const provider = getProvider();
 
-    const tokenAddresses: string[] = poolCreationState.seedTokens.map(
-      (token: PoolSeedToken) => {
-        if (
-          isSameAddress(token.tokenAddress, wrappedNativeAsset.value.address) &&
-          poolCreationState.useNativeAsset
-        ) {
-          return nativeAsset.address;
+    try {
+      const provider = getProvider();
+
+      const tokenAddresses: string[] = poolCreationState.seedTokens.map(
+        (token: PoolSeedToken) => {
+          if (
+            isSameAddress(token.tokenAddress, wrappedNativeAsset.value.address) &&
+            poolCreationState.useNativeAsset
+          ) {
+            return nativeAsset.address;
+          }
+          return token.tokenAddress;
         }
-        return token.tokenAddress;
+      );
+      let tx: TransactionResponse
+      if (poolTypeString.value=='weighted') {
+         tx = await balancerService.pools.weighted.initJoin(
+          provider,
+          poolCreationState.poolId,
+          account.value,
+          account.value,
+          tokenAddresses,
+          getScaledAmounts()
+        );
+      } else {
+         tx = await balancerService.pools.stable.initJoin(
+          provider,
+          poolCreationState.poolId,
+          account.value,
+          account.value,
+          tokenAddresses,
+          getScaledAmounts()
+        );
       }
-    );
-    let tx: TransactionResponse
-    if (poolTypeString.value=='weighted') {
-       tx = await balancerService.pools.weighted.initJoin(
-        provider,
-        poolCreationState.poolId,
-        account.value,
-        account.value,
-        tokenAddresses,
-        getScaledAmounts()
-      );
-    } else {
-       tx = await balancerService.pools.stable.initJoin(
-        provider,
-        poolCreationState.poolId,
-        account.value,
-        account.value,
-        tokenAddresses,
-        getScaledAmounts()
-      );
+     
+  
+      addTransaction({
+        id: tx.hash,
+        type: 'tx',
+        action: 'fundPool',
+        summary: poolCreationState.name,
+      });
+  
+      txListener(tx, {
+        onTxConfirmed: async () => {
+          resetState();
+        },
+        onTxFailed: () => {
+          console.log('Seed failed');
+        },
+      });
+  
+      return tx;
+    } catch (error) {
+      console.log(error)
+
+      return {} as TransactionResponse
+      
     }
    
-
-    addTransaction({
-      id: tx.hash,
-      type: 'tx',
-      action: 'fundPool',
-      summary: poolCreationState.name,
-    });
-
-    txListener(tx, {
-      onTxConfirmed: async () => {
-        resetState();
-      },
-      onTxFailed: () => {
-        console.log('Seed failed');
-      },
-    });
-
-    return tx;
   }
 
   function setActiveStep(step: number) {

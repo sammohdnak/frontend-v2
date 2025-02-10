@@ -3,7 +3,7 @@ import { TokenListURLMap } from '@/types/TokenList';
 const tokenlists: TokenListURLMap = {
   Balancer: {
     Allowlisted:
-      'https://raw.githubusercontent.com/balancer/tokenlists/main/generated/balancer.tokenlist.json',
+      'https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide.tokenlist.json',
   },
   External: [],
 };

@@ -34,6 +34,9 @@ export default class TokenListService {
       this.appNetwork
     ).tokenlists;
 
+    console.log({Balancer, External,network:this.appNetwork})
+
+
     const balancerLists = [Balancer.Allowlisted];
     const All = [...balancerLists, ...External];
     const Approved = [Balancer.Allowlisted, ...External];
@@ -54,12 +57,20 @@ export default class TokenListService {
     networkId: Network
   ): TokenListMap {
     return Object.keys(tokensList).reduce((acc: TokenListMap, key) => {
+      
       const data = tokensList[key];
-      if (data.tokens)
+      
+      if (data.tokens||key=='tokens') {
+
+       
+        
         acc[key] = {
           ...data,
           tokens: data.tokens.filter(token => token.chainId === networkId),
         };
+      }
+       
+      
       return acc;
     }, {});
   }

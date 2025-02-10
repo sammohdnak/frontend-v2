@@ -19,6 +19,7 @@ import TokenListService, {
 } from '@/services/token-list/token-list.service';
 import { TokenList, TokenListMap } from '@/types/TokenList';
 import testTokenList from '@tests/tokenlists/tokens-5.json';
+import axios from 'axios';
 
 /** TYPES */
 export interface TokenListsState {
@@ -42,6 +43,7 @@ const tokensListPromise = isTestMode // Return empty promise only in tests (vite
   ? Promise.resolve()
   : import(`@/assets/data/tokenlists/tokens-${networkId.value}.json`);
 
+
 /**
  * All active (toggled) tokenlists
  */
@@ -62,6 +64,7 @@ export const balancerTokenList = computed(
 export const balancerTokenLists = computed(
   (): TokenListMap => pick(allTokenLists.value, uris.Balancer.All)
 );
+
 
 /**
  * Approved token lists mapped by URI.
@@ -101,14 +104,22 @@ function isActiveList(uri: string): boolean {
 export const tokenListsProvider = () => {
   if (!isTestMode) {
     onBeforeMount(async () => {
-      const module = await tokensListPromise;
-      const tokenLists = module.default as TokenListMap;
+      let tideLists = await axios.get('https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide.tokenlist.json')
+
+
+      // const module = await tokensListPromise;
+      // console.log({tideLists:{'githublists':tideLists.data},module})
+
+      const tokenLists = {'https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide.tokenlist.json':tideLists.data} as TokenListMap;
+
 
       // filter token lists by network id
       allTokenLists.value = TokenListService.filterTokensList(
         tokenLists,
         networkId.value
       );
+
+      
     });
   } else {
     allTokenLists.value = testTokenList;

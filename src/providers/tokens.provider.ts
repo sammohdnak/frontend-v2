@@ -111,12 +111,15 @@ export const tokensProvider = (
     })
   );
 
+
   /**
    * All tokens from token lists that are toggled on.
    */
   const activeTokenListTokens = computed(
     (): TokenInfoMap => mapTokenListTokens(activeTokenLists.value)
   );
+
+
 
   /**
    * All tokens from Balancer token lists, e.g. 'listed' and 'vetted'.
@@ -138,6 +141,7 @@ export const tokensProvider = (
       ...state.injectedTokens,
     })
   );
+
 
   const wrappedNativeAsset = computed(
     (): TokenInfo => getToken(TOKENS.Addresses.wNativeAsset)
@@ -277,6 +281,7 @@ export const tokensProvider = (
     );
 
     state.injectedTokens = { ...state.injectedTokens, ...newTokens };
+
 
     // Wait for balances/allowances to be fetched for newly injected tokens.
     await nextTick();

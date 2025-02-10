@@ -1,0 +1,103 @@
+{
+  "https://raw.githubusercontent.com/balancer/tokenlists/main/generated/balancer.tokenlist.json": {
+    "name": "Tide",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "patch": 0
+    },
+    "keywords": [
+      "Tide",
+      "DeFi",
+      "DEX",
+      "AMM",
+      "Exchange",
+      "Liquidity",
+      "Pool",
+      "Token",
+      "Swap"
+    ],
+    "logoURI": "https://raw.githubusercontent.com/balancer/pebbles/master/images/pebbles-pad.256w.png",
+    "timestamp": "2024-09-09T15:32:22.216Z",
+    "tokens": [
+      {
+        "chainId": 943,
+        "address": "0xc5393473860aadeffe619c863a54423fa01ef443",
+        "logoURI": "https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide-logo.png",
+        "name": "Tide 80 TIDE 20 WPLS",
+        "symbol": "T-80TIDE-20WPLS",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "balancer"
+        }
+      },
+      {
+        "chainId": 943,
+        "address": "0x8aFf37d29B1718C2aaDf0F0Bf42D2C6663201EA9",
+        "logoURI": "https://raw.githubusercontent.com/sammohdnak/tide-lists-v2/refs/heads/main/tide-logo.png",
+        "name": "TIDE Governance Token",
+        "symbol": "TIDE",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "balancer"
+        }
+      },
+      {
+        "chainId": 943,
+        "address": "0x70499adEBB11Efd915E3b69E700c331778628707",
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2396.png",
+        "name": "Wrapped PLS",
+        "symbol": "WPLS",
+        "decimals": 18,
+        "extensions": {
+          "coingeckoId": "pulsechain"
+        }
+      },
+
+      {
+        "chainId": 943,
+        "address": "0x41B6b2147d5dfff3f779dBAd3AE709a8763a0b78",
+        "name": "INC",
+        "symbol": "mINC",
+        "decimals": 18,
+        "logoURI": "https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/126bd3afa049bd6ea7ba62a680b5b84c22ba6d929f207ec54b2999b0e91c7aac.png",
+        "extensions": {
+          "coingeckoId": "pulsex-incentive-token"
+        }
+      },
+      {
+        "chainId": 943,
+        "address": "0xdF20c7a6D9E66d9d0434A44f5A010AE8B0236a88",
+        "name": "DAI",
+        "symbol": "DAI",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png",
+        "extensions": {
+          "coingeckoId": "dai-on-pulsechain"
+        }
+      },
+      {
+        "chainId": 943,
+        "address": "0x42eF0594E6367aC7F4ACdd8159628b34bA92fB76",
+        "name": "PulseX",
+        "symbol": "PulseX",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/25417.png",
+        "extensions": {
+          "coingeckoId": "pulsex"
+        }
+      },
+      {
+        "chainId": 943,
+        "address": "0x794A6b3251c52A8B125CD50c57312911A2178981",
+        "name": "HEX",
+        "symbol": "HEX",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/28928.png",
+        "extensions": {
+          "coingeckoId": "hex-pulsechain"
+        }
+      }
+    ]
+  }
+}

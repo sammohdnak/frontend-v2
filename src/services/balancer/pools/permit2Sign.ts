@@ -1,3 +1,4 @@
+import { configService } from "@/services/config/config.service";
 import { Address } from "@balancer-labs/sdk";
 import { JsonRpcSigner } from "@ethersproject/providers";
 import { ethers, Signer,BigNumber } from "ethers";
@@ -912,18 +913,33 @@ export const permit2Signature = async (
     tokens: string[],
   amounts:string[]
 ) => {
+
+  console.log({
+    signer,
+    userAddress,
+    routerAddress,
+    permit2Address,
+    tokens,
+    amounts
+  })
     
   try {
     const deadline = Math.floor(Date.now() / 1000) + 3600;
+
+    
     
       const nonces= await getNoncesForPermit2(signer,userAddress,permit2Address,routerAddress,tokens)
       const domain = {
           name: "Permit2",
           //TODO Chhange to mainnet later
-        chainId: "11155111",
+        chainId: configService.env.VITE_IS_MAINNET?"369":"943",
         verifyingContract: permit2Address,
       };
   
+    
+    
+    console.log({nonces,domain})
+    
       
     
       const types = {
@@ -951,6 +967,8 @@ export const permit2Signature = async (
         spender: routerAddress,
         sigDeadline: deadline,
       };
+    
+    
   
     
     const signature = await signer._signTypedData(domain, types, value);
