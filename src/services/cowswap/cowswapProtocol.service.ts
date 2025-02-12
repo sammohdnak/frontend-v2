@@ -16,6 +16,7 @@ import {
   PriceQuoteParams,
 } from './types';
 import { ErrorWithMetadata } from '@/types';
+import { configService } from '../config/config.service';
 
 export const API_URLS = {
   [Network.MAINNET]: 'https://api.cow.fi/mainnet/api',
@@ -25,7 +26,7 @@ export default class CowswapProtocolService {
   baseURL: string;
 
   constructor(apiVersion = 'v1') {
-    const baseURL = API_URLS[networkId.value] ?? API_URLS[Network.MAINNET];
+    const baseURL = API_URLS[networkId.value] ?? API_URLS[configService.env.VITE_IS_MAINNET?Network.PULSECHAIN:Network.PULSECHAINV4];
 
     this.baseURL = `${baseURL}/${apiVersion}`;
   }

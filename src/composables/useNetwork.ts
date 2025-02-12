@@ -44,6 +44,9 @@ export const isArbitrum = computed(() => networkId.value === Network.ARBITRUM);
 export const isGnosis = computed(() => networkId.value === Network.GNOSIS);
 export const isGoerli = computed(() => networkId.value === Network.GOERLI);
 export const isBase = computed(() => networkId.value === Network.BASE);
+export const isPulseChain = computed(() => networkId.value === Network.PULSECHAIN);
+export const isePulseChainV4 = computed(() => networkId.value === Network.PULSECHAINV4);
+
 export const isAvalanche = computed(
   () => networkId.value === Network.AVALANCHE
 );

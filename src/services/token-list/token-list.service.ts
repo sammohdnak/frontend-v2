@@ -34,8 +34,6 @@ export default class TokenListService {
       this.appNetwork
     ).tokenlists;
 
-    console.log({Balancer, External,network:this.appNetwork})
-
 
     const balancerLists = [Balancer.Allowlisted];
     const All = [...balancerLists, ...External];

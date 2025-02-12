@@ -31,6 +31,7 @@ const {
   isRefetchingVotingPools,
   resetVotingPools,
 } = useVotingPools();
+
 const { veBalLockTooShort, veBalExpired, hasLock, hasExpiredLock } =
   useVeBalLockInfo();
 

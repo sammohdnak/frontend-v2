@@ -16,6 +16,7 @@ export function buildNetworkIconURL(network: Network | string): string {
     `/src/assets/images/icons/networks/${networkName}.svg`,
     import.meta.url
   ).href;
+
   return result;
 }
 

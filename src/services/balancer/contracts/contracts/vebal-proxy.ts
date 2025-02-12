@@ -21,9 +21,11 @@ export class VeBALProxy {
   constructor(
     public readonly address: string,
     private readonly provider = rpcProviderService.jsonProvider,
-    private readonly abi = networkId.value === Network.MAINNET
-      ? veBalProxyABI
-      : veBalProxyABIL2,
+    private readonly abi =
+      // networkId.value === Network.MAINNET
+      // ?
+      veBalProxyABI,
+      // : veBalProxyABIL2,
     private readonly config = configService,
     private readonly walletService = walletServiceInstance
   ) {

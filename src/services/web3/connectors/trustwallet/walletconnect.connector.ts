@@ -6,15 +6,15 @@ import { Connector, ConnectorId } from '../connector';
 import { Network } from '@/lib/config/types';
 import useDarkMode from '@/composables/useDarkMode';
 
-const { MAINNET, ARBITRUM, AVALANCHE, BASE, GNOSIS, POLYGON, ZKEVM } = Network;
+const { MAINNET, ARBITRUM, AVALANCHE, BASE, GNOSIS, POLYGON, ZKEVM,PULSECHAIN,PULSECHAINV4 } = Network;
 
 export class WalletConnectConnector extends Connector {
   id = ConnectorId.WalletConnect;
   async connect() {
     const provider = await EthereumProvider.init({
       projectId: 'ee9c0c7e1b8b86ebdfb8fd93bb116ca8',
-      chains: [MAINNET],
-      optionalChains: [AVALANCHE, ARBITRUM, BASE, GNOSIS, POLYGON, ZKEVM],
+      chains: configService.env.VITE_IS_MAINNET?[PULSECHAIN]:[PULSECHAINV4],
+      // optionalChains: [AVALANCHE, ARBITRUM, BASE, GNOSIS, POLYGON, ZKEVM],
       rpcMap: {
         [MAINNET]: configService.getNetworkRpc(MAINNET),
         [ARBITRUM]: configService.getNetworkRpc(ARBITRUM),
@@ -23,6 +23,10 @@ export class WalletConnectConnector extends Connector {
         [GNOSIS]: configService.getNetworkRpc(GNOSIS),
         [POLYGON]: configService.getNetworkRpc(POLYGON),
         [ZKEVM]: configService.getNetworkRpc(ZKEVM),
+        [PULSECHAIN]: configService.getNetworkRpc(PULSECHAIN),
+
+        [PULSECHAINV4]: configService.getNetworkRpc(PULSECHAIN),
+
       },
       showQrModal: true,
       qrModalOptions: { themeMode: useDarkMode().darkMode ? 'dark' : 'light' },

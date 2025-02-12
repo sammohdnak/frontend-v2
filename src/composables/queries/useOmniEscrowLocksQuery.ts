@@ -3,6 +3,7 @@ import useGraphQuery from './useGraphQuery';
 import useNetwork from '../useNetwork';
 import config from '@/lib/config';
 import { Network } from '@/lib/config/types';
+import { configService } from '@/services/config/config.service';
 
 const attrs = {
   id: true,
@@ -41,7 +42,7 @@ export function useOmniEscrowLocksQuery(account: ComputedRef<string>) {
   const queryKey = QUERY_KEYS.Gauges.OmniEscrowLocks(networkId, account);
 
   return useGraphQuery<OmniEscrowLockResponse>(
-    config[Network.MAINNET].subgraphs.gauge,
+    config[configService.env.VITE_IS_MAINNET?Network.PULSECHAIN:Network.PULSECHAINV4].subgraphs.gauge,
     queryKey,
     () => ({
       __name: 'OmniEscrowLocks',

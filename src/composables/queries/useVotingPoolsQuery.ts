@@ -51,9 +51,12 @@ export default function useVotingPoolsQuery(
   const queryFn = async (): Promise<VotingPool[]> => {
     try {
       let apiVotingPools: ApiVotingPools;
+
       if (isTestnet.value) {
+       
         apiVotingPools = testnetVotingPools('PULSECHAINV4');
       } else {
+      
         const api = getApi();
         const { veBalGetVotingList } = await api.VeBalGetVotingList();
 
@@ -64,6 +67,7 @@ export default function useVotingPoolsQuery(
         apiVotingPools,
         account.value
       );
+
       const poolsWithNetwork = pools.map(pool => {
         return {
           ...pool,
